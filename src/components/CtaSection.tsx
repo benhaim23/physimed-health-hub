@@ -34,74 +34,78 @@ export default function CtaSection() {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                <Button asChild className="bg-white text-physimed-800 hover:bg-gray-100 px-8 rounded-md">
-                  <Link to="/contact">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button asChild size="lg" className="bg-white text-physimed-800 hover:bg-gray-100 px-8 rounded-md shadow-lg hover:shadow-xl transition-all">
+                  <Link to="/contact" className="flex items-center">
                     Request Corporate Consultation
                     <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="border-white/70 text-white hover:bg-white/10 px-8 rounded-md">
-                  <Link to="/pricing">View Plan Details</Link>
+                <Button asChild variant="outline" size="lg" className="border-white border-2 text-white hover:bg-white/20 px-8 rounded-md shadow-md">
+                  <Link to="/pricing" className="flex items-center">
+                    View Plan Details
+                    <ArrowRight size={16} className="ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
                 </Button>
               </div>
             </div>
             
             <div className="flex justify-center">
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-xl border border-white/20">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 shadow-xl w-full max-w-md transition-transform hover:translate-y-[-5px] duration-300">
                 <h3 className="text-2xl font-serif font-bold mb-6 text-center">Book a Corporate Demo</h3>
                 
-                <form className="space-y-4">
+                <form className="space-y-5">
                   <div>
-                    <label htmlFor="company" className="block mb-2 text-sm">Company Name</label>
+                    <label htmlFor="company" className="block mb-2 text-sm font-medium">Company Name</label>
                     <input 
                       type="text" 
                       id="company" 
-                      className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 transition-all"
                       placeholder="Your company"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="name" className="block mb-2 text-sm">Your Name</label>
+                    <label htmlFor="name" className="block mb-2 text-sm font-medium">Your Name</label>
                     <input 
                       type="text" 
                       id="name" 
-                      className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 transition-all"
                       placeholder="Full name"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block mb-2 text-sm">Email Address</label>
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium">Email Address</label>
                     <input 
                       type="email" 
                       id="email" 
-                      className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60"
+                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white placeholder-white/60 transition-all"
                       placeholder="your@email.com"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="employees" className="block mb-2 text-sm">Number of Employees</label>
+                    <label htmlFor="employees" className="block mb-2 text-sm font-medium">Number of Employees</label>
                     <select 
                       id="employees" 
-                      className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white"
+                      className="w-full px-4 py-3 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white appearance-none cursor-pointer"
+                      style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg fill=\"white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/></svg>')", backgroundRepeat: "no-repeat", backgroundPosition: "right 10px center" }}
                     >
-                      <option value="" className="text-gray-800">Select option</option>
-                      <option value="1-10" className="text-gray-800">1-10 employees</option>
-                      <option value="11-50" className="text-gray-800">11-50 employees</option>
-                      <option value="51-200" className="text-gray-800">51-200 employees</option>
-                      <option value="201+" className="text-gray-800">201+ employees</option>
+                      <option value="" className="text-gray-800 bg-white">Select option</option>
+                      <option value="1-10" className="text-gray-800 bg-white">1-10 employees</option>
+                      <option value="11-50" className="text-gray-800 bg-white">11-50 employees</option>
+                      <option value="51-200" className="text-gray-800 bg-white">51-200 employees</option>
+                      <option value="201+" className="text-gray-800 bg-white">201+ employees</option>
                     </select>
                   </div>
                   
-                  <div className="pt-2">
+                  <div className="pt-3">
                     <Button 
                       type="submit"
-                      className="w-full bg-white text-physimed-800 hover:bg-gray-100 flex items-center justify-center"
+                      className="w-full bg-white text-physimed-800 hover:bg-gray-100 flex items-center justify-center py-3 font-medium rounded-md shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                      <Calendar size={16} className="mr-2" />
+                      <Calendar size={18} className="mr-2" />
                       Schedule Demo
                     </Button>
                   </div>
