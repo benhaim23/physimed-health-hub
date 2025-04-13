@@ -1,12 +1,15 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Calendar, MessageSquare } from 'lucide-react';
+import { Menu, X, Phone, Calendar } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,14 +32,15 @@ export default function Navbar() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-physimed font-medium link-underline">Home</Link>
-            <Link to="/services" className="text-gray-700 hover:text-physimed font-medium link-underline">Services</Link>
-            <Link to="/pricing" className="text-gray-700 hover:text-physimed font-medium link-underline">Pricing</Link>
-            <Link to="/about" className="text-gray-700 hover:text-physimed font-medium link-underline">About</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-physimed font-medium link-underline">Contact</Link>
+            <Link to="/" className="text-gray-700 hover:text-physimed font-medium link-underline">{t("home")}</Link>
+            <Link to="/services" className="text-gray-700 hover:text-physimed font-medium link-underline">{t("services")}</Link>
+            <Link to="/pricing" className="text-gray-700 hover:text-physimed font-medium link-underline">{t("pricing")}</Link>
+            <Link to="/about" className="text-gray-700 hover:text-physimed font-medium link-underline">{t("about")}</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-physimed font-medium link-underline">{t("contact")}</Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <Button variant="outline" size="sm" className="rounded-full flex items-center gap-2">
               <Phone size={16} />
               <span className="hidden lg:inline">514-747-8192</span>
@@ -44,7 +48,7 @@ export default function Navbar() {
             <Button asChild size="sm" className="bg-physimed hover:bg-physimed-700 text-white rounded-full">
               <Link to="/booking">
                 <Calendar size={16} className="mr-2" />
-                Book Now
+                {t("book_now")}
               </Link>
             </Button>
           </div>
@@ -63,12 +67,15 @@ export default function Navbar() {
           isMenuOpen ? "max-h-[400px] opacity-100 mt-4" : "max-h-0 opacity-0"
         )}>
           <nav className="flex flex-col space-y-4 py-4">
-            <Link to="/" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">Home</Link>
-            <Link to="/services" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">Services</Link>
-            <Link to="/pricing" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">Pricing</Link>
-            <Link to="/about" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">About</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">Contact</Link>
+            <Link to="/" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">{t("home")}</Link>
+            <Link to="/services" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">{t("services")}</Link>
+            <Link to="/pricing" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">{t("pricing")}</Link>
+            <Link to="/about" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">{t("about")}</Link>
+            <Link to="/contact" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100">{t("contact")}</Link>
             <div className="flex flex-col space-y-3 pt-3">
+              <div className="flex justify-center">
+                <LanguageSelector />
+              </div>
               <Button variant="outline" size="sm" className="rounded-full justify-center">
                 <Phone size={16} className="mr-2" />
                 514-747-8192
@@ -76,7 +83,7 @@ export default function Navbar() {
               <Button asChild size="sm" className="bg-physimed hover:bg-physimed-700 text-white rounded-full justify-center">
                 <Link to="/booking">
                   <Calendar size={16} className="mr-2" />
-                  Book Now
+                  {t("book_now")}
                 </Link>
               </Button>
             </div>
