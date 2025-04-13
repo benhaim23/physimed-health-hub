@@ -83,6 +83,10 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
@@ -143,7 +147,7 @@
 }
 
 .pricing-card:hover {
-  @apply -translate-y-1 shadow-lg;
+  @apply -translate-y-2 shadow-lg;
 }
 
 /* Button hover effects */
@@ -167,9 +171,73 @@
 
 .link-underline::after {
   content: '';
-  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-physimed transition-all duration-300;
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-physimed transition-all duration-300 ease-out;
 }
 
 .link-underline:hover::after {
   @apply w-full;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+/* Enhanced card styles */
+.enhanced-card {
+  @apply bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c1c1c1;
 }
