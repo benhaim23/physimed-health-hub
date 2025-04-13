@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        physimed: {
+          DEFAULT: '#6D1A36',
+          50: '#f9f0f3',
+          100: '#f3dbe3',
+          200: '#eabbcb',
+          300: '#d9899f',
+          400: '#c75a78',
+          500: '#b33f5e',
+          600: '#962a48',
+          700: '#7e2039',
+          800: '#6D1A36',
+          900: '#5d1a2d',
+          950: '#400b1a',
+        },
+        blue: {
+          light: '#4A90E2',
+          DEFAULT: '#2E74D4',
+          dark: '#1D5EB5',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +104,47 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        'fade-out': {
+          '0%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateY(10px)'
+          }
+        },
+        'pulse-slow': {
+          '0%, 100%': {
+            opacity: '1'
+          },
+          '50%': {
+            opacity: '0.8'
+          }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'fade-out': 'fade-out 0.5s ease-out',
+        'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+			},
+      fontFamily: {
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+      },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
