@@ -24,9 +24,8 @@ export default function Navbar() {
               <img 
                 src="/lovable-uploads/9517cafd-887f-421a-85e8-41ba5866a617.png" 
                 alt="Physimed Logo" 
-                className="h-10 mr-2" 
+                className="h-16 mr-2" // Enlarged logo height from h-10 to h-16
               />
-              <span className="hidden md:inline-block text-physimed-800 font-serif text-xl font-bold">Physimed</span>
             </Link>
           </div>
           
