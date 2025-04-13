@@ -3,13 +3,17 @@ import { ArrowRight, Award, Clock, UserCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { useLanguage } from "@/contexts/LanguageContext";
+import { BackgroundPaths } from "@/components/ui/background-paths";
 
 export default function Hero() {
   const { t } = useLanguage();
   
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28 overflow-hidden relative">
+      {/* Background Paths */}
+      <BackgroundPaths />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-w-xl animate-fade-in">
             <span className="inline-block px-4 py-1.5 bg-physimed-100 text-physimed-800 rounded-full text-sm font-medium shadow-sm">
