@@ -2,45 +2,48 @@
 import { ArrowRight, Award, Clock, UserCheck } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+  
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 max-w-xl animate-fade-in">
             <span className="inline-block px-3 py-1 bg-physimed-100 text-physimed-800 rounded-full text-sm font-medium">
-              Premium Corporate Healthcare
+              {t("premium_corp_healthcare")}
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-              <span className="text-gradient">One-Stop Health Check-Ups</span> and Concierge Care
+              <span className="text-gradient">{t("hero_title")}</span>
             </h1>
             <p className="text-gray-600 text-lg">
-              At Physimed, we believe corporate leaders and employees deserve fast, comprehensive, and personalized healthcare—all under one roof.
+              {t("hero_subtitle")}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex items-center">
                 <Clock className="h-5 w-5 text-physimed mr-2" />
-                <span className="text-gray-700">Same-Day Access</span>
+                <span className="text-gray-700">{t("same_day_access")}</span>
               </div>
               <div className="flex items-center">
                 <UserCheck className="h-5 w-5 text-physimed mr-2" />
-                <span className="text-gray-700">Consistent Care</span>
+                <span className="text-gray-700">{t("consistent_care")}</span>
               </div>
               <div className="flex items-center">
                 <Award className="h-5 w-5 text-physimed mr-2" />
-                <span className="text-gray-700">Premium Services</span>
+                <span className="text-gray-700">{t("premium_services")}</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
               <Button asChild className="bg-physimed hover:bg-physimed-700 text-white px-8 py-6 rounded-md btn-hover-effect">
                 <Link to="/pricing">
-                  View Plans
+                  {t("view_plans")}
                   <ArrowRight size={16} className="ml-2" />
                 </Link>
               </Button>
               <Button asChild variant="outline" className="border-physimed text-physimed hover:bg-physimed-50 px-8 py-6 rounded-md">
-                <Link to="/booking">Book Consultation</Link>
+                <Link to="/booking">{t("book_consultation")}</Link>
               </Button>
             </div>
           </div>
