@@ -1,5 +1,5 @@
 
-import { ArrowRight, Award, Clock, Download, FileDown, UserCheck } from 'lucide-react';
+import { ArrowRight, Clock, UserCheck, Award, FileDown } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -61,9 +61,9 @@ export default function Hero() {
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
             
             {/* Health check-up image */}
-            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-[90%] pamphlet-container transform hover:scale-[1.02] transition-transform duration-300 mb-4">
+            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-full pamphlet-container transform hover:scale-[1.02] transition-transform duration-300 mb-4">
               <img 
-                src="/lovable-uploads/572aca0a-b922-4887-ac72-b7913774af8c.png" 
+                src="/lovable-uploads/d997a0a1-4eee-4c2b-b39d-cb92398bb79d.png" 
                 alt="Physimed Health Check-up" 
                 className="w-full h-auto object-contain"
               />
@@ -83,4 +83,3 @@ export default function Hero() {
     </section>
   );
 }
-
