@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
@@ -138,9 +137,8 @@ export default function ContactSection() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
+                  className="w-full h-48 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
                   placeholder="How can we help you?"
-                  rows={5}
                   required
                 />
               </div>
