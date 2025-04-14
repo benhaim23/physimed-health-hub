@@ -134,10 +134,10 @@ export default function PricingSection() {
               <TabsContent value="option2" className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Package 1 */}
-                  <Card className="overflow-hidden border-physimed-100 hover:shadow-lg transition-all duration-300">
+                  <Card className="overflow-hidden border-physimed-100 hover:shadow-lg transition-all duration-300 flex flex-col">
                     <CardHeader className="bg-physimed-50 p-6">
                       <CardTitle className="text-2xl font-serif font-bold text-physimed-800">
-                        Package 1
+                        Essential Care Plan
                       </CardTitle>
                       <CardDescription className="text-sm mt-1">
                         For adults under 65 without chronic conditions
@@ -148,7 +148,7 @@ export default function PricingSection() {
                       </div>
                     </CardHeader>
                     
-                    <CardContent className="p-6">
+                    <CardContent className="p-6 flex-grow">
                       <div className="space-y-3">
                         {[
                           "Annual check-up & follow-up",
@@ -180,10 +180,10 @@ export default function PricingSection() {
                       </div>
                     </CardContent>
                     
-                    <CardFooter className="p-6 pt-0">
+                    <CardFooter className="p-6 pt-0 mt-auto">
                       <Button asChild className="w-full gap-2 bg-physimed hover:bg-physimed-700 text-white">
                         <Link to="/booking">
-                          Subscribe to Package 1
+                          Subscribe to Essential Care
                           <MoveRight size={16} />
                         </Link>
                       </Button>
@@ -191,14 +191,14 @@ export default function PricingSection() {
                   </Card>
                   
                   {/* Package 2 */}
-                  <Card className="overflow-hidden border-physimed-300 hover:border-physimed-500 hover:shadow-lg relative transition-all duration-300">
+                  <Card className="overflow-hidden border-physimed-300 hover:border-physimed-500 hover:shadow-lg relative transition-all duration-300 flex flex-col">
                     <div className="absolute top-0 right-0 bg-physimed text-white px-3 py-1 text-xs font-medium rounded-bl-md">
                       Most Popular
                     </div>
                     
                     <CardHeader className="bg-physimed-100 p-6">
                       <CardTitle className="text-2xl font-serif font-bold text-physimed-800">
-                        Package 2
+                        Premium Care Plus
                       </CardTitle>
                       <CardDescription className="text-sm mt-1">
                         For adults 65+ or with chronic conditions
@@ -209,7 +209,7 @@ export default function PricingSection() {
                       </div>
                     </CardHeader>
                     
-                    <CardContent className="p-6">
+                    <CardContent className="p-6 flex-grow">
                       <div className="space-y-3">
                         {[
                           "Annual check-up & follow-up",
@@ -242,10 +242,10 @@ export default function PricingSection() {
                       </div>
                     </CardContent>
                     
-                    <CardFooter className="p-6 pt-0">
+                    <CardFooter className="p-6 pt-0 mt-auto">
                       <Button asChild className="w-full gap-2 bg-physimed hover:bg-physimed-700 text-white">
                         <Link to="/booking">
-                          Subscribe to Package 2
+                          Subscribe to Premium Care
                           <MoveRight size={16} />
                         </Link>
                       </Button>
