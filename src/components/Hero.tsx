@@ -6,27 +6,34 @@ import { BackgroundPaths } from "@/components/ui/background-paths";
 import { Typewriter } from "@/components/ui/typewriter-text";
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  
+  const typewriterText = {
+    en: [
+      "Welcome to Physimed Corporate Health",
+      "Give Your Team the Gift of Premium Healthcare", 
+      "Unlock our Medical Corporate Client Concierge Service"
+    ],
+    fr: [
+      "Bienvenue à Physimed Santé Corporative",
+      "Offrez à votre équipe des soins de santé de qualité",
+      "Débloquez notre service de conciergerie client médical corporatif"
+    ]
+  };
   
   const handleDownloadPamphlet = () => {
-    // In a real implementation, this would download a PDF
     alert(t("download_alert"));
   };
   
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16 overflow-hidden relative">
-      {/* Background Paths */}
       <BackgroundPaths />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-4 max-w-xl animate-fade-in">
             <Typewriter 
-              text={[
-                "Welcome to Physimed Corporate Health",
-                "Give Your Team the Gift of Premium Healthcare", 
-                "Unlock our Medical Corporate Client Concierge Service"
-              ]}
+              text={typewriterText[language]}
               speed={100}
               loop={true}
               className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-physimed"
@@ -46,6 +53,7 @@ export default function Hero() {
                 <span className="text-gray-700 font-medium">{t("premium_services")}</span>
               </div>
             </div>
+            
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
               <Button asChild className="bg-physimed hover:bg-physimed-700 text-white px-8 py-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
                 <Link to="/pricing" className="flex items-center">

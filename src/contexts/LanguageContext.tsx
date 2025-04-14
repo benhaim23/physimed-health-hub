@@ -296,6 +296,18 @@ const translations: Translations = {
     en: 'FR',
     fr: 'FR',
   },
+  welcome_physimed: {
+    en: "Welcome to Physimed Corporate Health",
+    fr: "Bienvenue à Physimed Santé Corporative",
+  },
+  gift_premium_healthcare: {
+    en: "Give Your Team the Gift of Premium Healthcare",
+    fr: "Offrez à votre équipe des soins de santé de qualité",
+  },
+  unlock_concierge: {
+    en: "Unlock our Medical Corporate Client Concierge Service",
+    fr: "Débloquez notre service de conciergerie client médical corporatif",
+  },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
