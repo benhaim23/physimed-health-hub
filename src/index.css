@@ -105,6 +105,28 @@
   .section {
     @apply py-12 md:py-24;
   }
+  
+  .section-header-badge {
+    @apply inline-block px-4 py-1.5 bg-physimed-100 text-physimed-800 rounded-full text-sm font-medium shadow-sm;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-serif font-bold mt-2 mb-5 relative;
+  }
+  
+  .section-title-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-physimed rounded-full;
+  }
+  
+  .section-title-background {
+    @apply relative;
+  }
+  
+  .section-title-background::before {
+    content: '';
+    @apply absolute bottom-2 left-0 w-full h-3 bg-physimed-100 opacity-50 -z-10;
+  }
 }
 
 /* Pamphlet styling */

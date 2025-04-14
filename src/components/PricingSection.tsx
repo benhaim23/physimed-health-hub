@@ -12,11 +12,19 @@ export default function PricingSection() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-physimed font-medium">Pricing</span>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
+          {/* Enhanced section header with visual elements */}
+          <div className="relative mb-4">
+            <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-200"></div>
+            <span className="relative inline-block px-6 py-1 bg-white text-physimed font-medium text-lg z-10">
+              Pricing
+            </span>
+          </div>
+          
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-physimed to-physimed-700">
             Our Corporate Medical Plan Options
           </h2>
-          <p className="text-gray-600">
+          
+          <p className="text-gray-600 text-lg mx-auto max-w-2xl">
             Choose the plan that's right for your team. All plans include comprehensive assessments and personalized care.
           </p>
           
