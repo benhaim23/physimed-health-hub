@@ -38,14 +38,16 @@ export default function CtaSection() {
               </div>
               
               <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                <Button asChild className="bg-white text-physimed-800 hover:bg-gray-100 px-8 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
-                  <Link to="/contact">
+                <Button asChild className="bg-white text-physimed hover:bg-gray-100 px-8 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
+                  <Link to="/contact" className="text-physimed">
                     {t("request_consultation")}
                     <ArrowRight size={16} className="ml-2" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" className="border-white/70 text-white hover:bg-white/10 px-8 rounded-md shadow-sm hover:shadow-md transition-all duration-300">
-                  <Link to="/pricing">{t("view_plan_details")}</Link>
+                <Button asChild variant="outline" className="border-white text-physimed bg-white hover:bg-gray-100 px-8 rounded-md shadow-sm hover:shadow-md transition-all duration-300">
+                  <Link to="/pricing" className="text-physimed">
+                    {t("view_plan_details")}
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -124,3 +126,4 @@ export default function CtaSection() {
     </section>
   );
 }
+
