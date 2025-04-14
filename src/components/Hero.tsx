@@ -14,13 +14,13 @@ export default function Hero() {
   };
   
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-20 md:py-28 overflow-hidden relative">
+    <section className="bg-gradient-to-b from-gray-50 to-white py-12 md:py-16 overflow-hidden relative">
       {/* Background Paths */}
       <BackgroundPaths />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 max-w-xl animate-fade-in">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="space-y-4 max-w-xl animate-fade-in">
             <span className="inline-block px-4 py-1.5 bg-physimed-100 text-physimed-800 rounded-full text-sm font-medium shadow-sm">
               {t("premium_corp_healthcare")}
             </span>
@@ -30,7 +30,7 @@ export default function Hero() {
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
               {t("hero_subtitle")}
             </p>
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap gap-3 pt-2">
               <div className="flex items-center group bg-white/80 px-4 py-2 rounded-lg shadow-sm hover:shadow transition-all duration-300">
                 <Clock className="h-5 w-5 text-physimed mr-2 transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-gray-700 font-medium">{t("same_day_access")}</span>
@@ -44,7 +44,7 @@ export default function Hero() {
                 <span className="text-gray-700 font-medium">{t("premium_services")}</span>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-6">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
               <Button asChild className="bg-physimed hover:bg-physimed-700 text-white px-8 py-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
                 <Link to="/pricing" className="flex items-center">
                   {t("view_plans")}
@@ -57,11 +57,11 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative lg:h-[600px] flex flex-col items-center justify-center">
+          <div className="relative lg:h-[500px] flex flex-col items-center justify-center">
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
             
             {/* Health check-up image */}
-            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-[90%] pamphlet-container transform hover:scale-[1.02] transition-transform duration-300 mb-6">
+            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-[90%] pamphlet-container transform hover:scale-[1.02] transition-transform duration-300 mb-4">
               <img 
                 src="/lovable-uploads/572aca0a-b922-4887-ac72-b7913774af8c.png" 
                 alt="Physimed Health Check-up" 
@@ -83,3 +83,4 @@ export default function Hero() {
     </section>
   );
 }
+
