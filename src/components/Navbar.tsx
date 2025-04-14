@@ -1,11 +1,18 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Phone, Calendar } from 'lucide-react';
+import { Menu, X, Phone, Calendar, Home, FileText, CreditCard, Users, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSelector from './LanguageSelector';
+import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+} from "@/components/ui/menubar";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +21,14 @@ export default function Navbar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const navItems = [
+    { name: t("home"), icon: Home, path: "/" },
+    { name: t("services"), icon: FileText, path: "/services" },
+    { name: t("pricing"), icon: CreditCard, path: "/pricing" },
+    { name: t("about"), icon: Users, path: "/about" },
+    { name: t("contact"), icon: MessageSquare, path: "/contact" },
+  ];
 
   return (
     <header className="sticky top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
@@ -30,13 +45,22 @@ export default function Navbar() {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10">
-            <Link to="/" className="text-gray-700 hover:text-physimed font-medium tracking-wide link-underline py-2">{t("home")}</Link>
-            <Link to="/services" className="text-gray-700 hover:text-physimed font-medium tracking-wide link-underline py-2">{t("services")}</Link>
-            <Link to="/pricing" className="text-gray-700 hover:text-physimed font-medium tracking-wide link-underline py-2">{t("pricing")}</Link>
-            <Link to="/about" className="text-gray-700 hover:text-physimed font-medium tracking-wide link-underline py-2">{t("about")}</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-physimed font-medium tracking-wide link-underline py-2">{t("contact")}</Link>
-          </nav>
+          <div className="hidden md:flex items-center">
+            <Menubar className="border-none shadow-none bg-transparent relative mr-4">
+              {navItems.map((item) => (
+                <MenubarMenu key={item.path}>
+                  <Link to={item.path}>
+                    <MenubarTrigger 
+                      className="flex items-center gap-1.5 px-4 py-2 text-gray-700 hover:text-physimed font-medium tracking-wide transition-colors duration-300"
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span>{item.name}</span>
+                    </MenubarTrigger>
+                  </Link>
+                </MenubarMenu>
+              ))}
+            </Menubar>
+          </div>
           
           <div className="hidden md:flex items-center space-x-5">
             <LanguageSelector />
@@ -66,11 +90,16 @@ export default function Navbar() {
           isMenuOpen ? "max-h-[400px] opacity-100 mt-4" : "max-h-0 opacity-0"
         )}>
           <nav className="flex flex-col space-y-4 py-4">
-            <Link to="/" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200">{t("home")}</Link>
-            <Link to="/services" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200">{t("services")}</Link>
-            <Link to="/pricing" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200">{t("pricing")}</Link>
-            <Link to="/about" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200">{t("about")}</Link>
-            <Link to="/contact" className="text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200">{t("contact")}</Link>
+            {navItems.map((item) => (
+              <Link 
+                key={item.path}
+                to={item.path} 
+                className="flex items-center gap-2 text-gray-700 hover:text-physimed py-2 border-b border-gray-100 transition-colors duration-200"
+              >
+                <item.icon className="w-4 h-4" />
+                <span>{item.name}</span>
+              </Link>
+            ))}
             <div className="flex flex-col space-y-3 pt-3">
               <div className="flex justify-center">
                 <LanguageSelector />
