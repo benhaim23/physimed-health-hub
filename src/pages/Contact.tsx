@@ -25,10 +25,10 @@ const Contact = () => {
               {t("get_in_touch")}
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold mt-4 mb-6">
-              {t("contact_physimed")}
+              {t("contact_us")}
             </h1>
             <p className="text-gray-600 text-lg">
-              {t("contact_desc")}
+              {t("contact_simple_desc")}
             </p>
           </div>
           
