@@ -11,11 +11,11 @@ const Booking = () => {
   const { t } = useLanguage();
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <Navbar />
       <main>
         <div className="container mx-auto px-4 py-8">
-          <Link to="/" className="inline-flex items-center text-physimed hover:text-physimed-700 mb-6">
+          <Link to="/" className="inline-flex items-center text-physimed hover:text-physimed-700 mb-6 transition-colors">
             <ArrowLeft size={16} className="mr-2" />
             {t("back_to_home")}
           </Link>
