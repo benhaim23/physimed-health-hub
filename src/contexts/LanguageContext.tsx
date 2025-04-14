@@ -426,456 +426,456 @@ const translations: Translations = {
   },
   whats_included: {
     en: 'What\'s Included:',
-    fr: 'Ce qui est inclus:',
+    fr: 'Ce qui est inclus:'
   },
   pre_checkup: {
     en: 'Pre-Check-Up:',
-    fr: 'Pré-bilan:',
+    fr: 'Pré-bilan:'
   },
   digital_medical_file: {
     en: 'Digital medical file creation & updates',
-    fr: 'Création et mises à jour du dossier médical numérique',
+    fr: 'Création et mises à jour du dossier médical numérique'
   },
   health_lifestyle_questionnaire: {
     en: 'Health & lifestyle questionnaire',
-    fr: 'Questionnaire de santé et de style de vie',
+    fr: 'Questionnaire de santé et de style de vie'
   },
   vital_signs_medication: {
     en: 'Vital signs & medication review',
-    fr: 'Examen des signes vitaux et des médicaments',
+    fr: 'Examen des signes vitaux et des médicaments'
   },
   in_clinic_consultations: {
     en: 'In-Clinic Consultations:',
-    fr: 'Consultations en clinique:',
+    fr: 'Consultations en clinique:'
   },
   nurse_coordination: {
     en: 'Nurse coordination visit',
-    fr: 'Visite de coordination avec infirmière',
+    fr: 'Visite de coordination avec infirmière'
   },
   bloodwork_markers: {
     en: 'Bloodwork for key health markers',
-    fr: 'Analyses sanguines pour les marqueurs de santé clés',
+    fr: 'Analyses sanguines pour les marqueurs de santé clés'
   },
   kinesiologist_assessment: {
     en: 'Kinesiologist Assessment with personalized fitness plan',
-    fr: 'Évaluation du kinésiologue avec plan de conditionnement physique personnalisé',
+    fr: 'Évaluation du kinésiologue avec plan de conditionnement physique personnalisé'
   },
   dietitian_assessment: {
     en: 'Dietitian Assessment with personalized nutrition guidance',
-    fr: 'Évaluation du diététicien avec conseils nutritionnels personnalisés',
+    fr: 'Évaluation du diététicien avec conseils nutritionnels personnalisés'
   },
   additional_services: {
     en: 'Additional Services:',
-    fr: 'Services additionnels:',
+    fr: 'Services additionnels:'
   },
   physical_exam: {
     en: 'Full physical exam & aesthetic evaluation',
-    fr: 'Examen physique complet et évaluation esthétique',
+    fr: 'Examen physique complet et évaluation esthétique'
   },
   medical_history_review: {
     en: 'Medical history review & test results discussion',
-    fr: 'Examen des antécédents médicaux et discussion des résultats des tests',
+    fr: 'Examen des antécédents médicaux et discussion des résultats des tests'
   },
   cancer_sti_screenings: {
     en: 'Cancer & STI screenings (as medically necessary)',
-    fr: 'Dépistages du cancer et des ITS (selon les besoins médicaux)',
+    fr: 'Dépistages du cancer et des ITS (selon les besoins médicaux)'
   },
   comprehensive_bloodwork: {
     en: 'Comprehensive blood work & urine analysis',
-    fr: 'Analyses de sang et d\'urine complètes',
+    fr: 'Analyses de sang et d\'urine complètes'
   },
   book_health_checkup: {
     en: 'Book Health Check-Up',
-    fr: 'Réserver un bilan de santé',
+    fr: 'Réserver un bilan de santé'
   },
   essential_care_plan: {
     en: 'Essential Care Plan',
-    fr: 'Forfait de soins essentiels',
+    fr: 'Forfait de soins essentiels'
   },
   adults_under_65: {
     en: 'For adults under 65 without chronic conditions',
-    fr: 'Pour les adultes de moins de 65 ans sans conditions chroniques',
+    fr: 'Pour les adultes de moins de 65 ans sans conditions chroniques'
   },
   annual_checkup_followup: {
     en: 'Annual check-up & follow-up',
-    fr: 'Bilan de santé annuel et suivi',
+    fr: 'Bilan de santé annuel et suivi'
   },
   additional_doctor_visits_4: {
     en: '2 additional same-day doctor visits (total of 4 appointments)',
-    fr: '2 visites supplémentaires chez le médecin le jour même (total de 4 rendez-vous)',
+    fr: '2 visites supplémentaires chez le médecin le jour même (total de 4 rendez-vous)'
   },
   access_concierge_service: {
     en: 'Full access to 7-day-a-week medical concierge service',
-    fr: 'Accès complet au service de conciergerie médicale 7 jours sur 7',
+    fr: 'Accès complet au service de conciergerie médicale 7 jours sur 7'
   },
   tests_medical_need: {
     en: 'Tests/screenings based on medical need',
-    fr: 'Tests/dépistages selon les besoins médicaux',
+    fr: 'Tests/dépistages selon les besoins médicaux'
   },
   same_day_appointments: {
     en: 'Same-day appointments with consistent doctor access',
-    fr: 'Rendez-vous le jour même avec un accès constant au médecin',
+    fr: 'Rendez-vous le jour même avec un accès constant au médecin'
   },
   best_health_maintenance: {
     en: 'Best for individuals with good health maintenance needs',
-    fr: 'Idéal pour les personnes ayant de bons besoins de maintien de la santé',
+    fr: 'Idéal pour les personnes ayant de bons besoins de maintien de la santé'
   },
   subscribe_essential_care: {
     en: 'Subscribe to Essential Care',
-    fr: 'Souscrire au forfait de soins essentiels',
+    fr: 'Souscrire au forfait de soins essentiels'
   },
   most_popular: {
     en: 'Most Popular',
-    fr: 'Le plus populaire',
+    fr: 'Le plus populaire'
   },
   premium_care_plus: {
     en: 'Premium Care Plus',
-    fr: 'Forfait de soins premium plus',
+    fr: 'Forfait de soins premium plus'
   },
   adults_65_chronic: {
     en: 'For adults 65+ or with chronic conditions',
-    fr: 'Pour les adultes de 65 ans et plus ou avec des conditions chroniques',
+    fr: 'Pour les adultes de 65 ans et plus ou avec des conditions chroniques'
   },
   additional_doctor_visits_7: {
     en: '5 additional same-day doctor visits (total of 7 appointments)',
-    fr: '5 visites supplémentaires chez le médecin le jour même (total de 7 rendez-vous)',
+    fr: '5 visites supplémentaires chez le médecin le jour même (total de 7 rendez-vous)'
   },
   priority_scheduling: {
     en: 'Priority scheduling for specialist referrals',
-    fr: 'Planification prioritaire pour les références aux spécialistes',
+    fr: 'Planification prioritaire pour les références aux spécialistes'
   },
   extended_medical_support: {
     en: 'Extended medical support with more frequent visits',
-    fr: 'Soutien médical étendu avec des visites plus fréquentes',
+    fr: 'Soutien médical étendu avec des visites plus fréquentes'
   },
   ideal_chronic_management: {
     en: 'Ideal for ongoing chronic condition management',
-    fr: 'Idéal pour la gestion continue des maladies chroniques',
+    fr: 'Idéal pour la gestion continue des maladies chroniques'
   },
   subscribe_premium_care: {
     en: 'Subscribe to Premium Care',
-    fr: 'Souscrire au forfait de soins premium',
+    fr: 'Souscrire au forfait de soins premium'
   },
   medical_concierge_service: {
     en: 'Medical Concierge Service',
-    fr: 'Service de conciergerie médicale',
+    fr: 'Service de conciergerie médicale'
   },
   concierge_description: {
     en: 'Available with all care packages, our medical concierge service ensures rapid, expert support from 6 AM to 9 PM every day—even on holidays.',
-    fr: 'Disponible avec tous les forfaits de soins, notre service de conciergerie médicale assure un soutien rapide et expert de 6h à 21h tous les jours, même les jours fériés.',
+    fr: 'Disponible avec tous les forfaits de soins, notre service de conciergerie médicale assure un soutien rapide et expert de 6h à 21h tous les jours, même les jours fériés.'
   },
   phone_consultations: {
     en: 'Health-related phone consultations',
-    fr: 'Consultations téléphoniques liées à la santé',
+    fr: 'Consultations téléphoniques liées à la santé'
   },
   emergency_appointments: {
     en: 'Emergency appointments',
-    fr: 'Rendez-vous d\'urgence',
+    fr: 'Rendez-vous d\'urgence'
   },
   telemedicine_visits: {
     en: 'Telemedicine (video visits)',
-    fr: 'Télémédecine (visites vidéo)',
+    fr: 'Télémédecine (visites vidéo)'
   },
   prescription_renewals: {
     en: 'Prescription renewals',
-    fr: 'Renouvellements d\'ordonnances',
+    fr: 'Renouvellements d\'ordonnances'
   },
   form_completion: {
     en: 'Form completion assistance',
-    fr: 'Assistance pour remplir des formulaires',
+    fr: 'Assistance pour remplir des formulaires'
   },
   coordination_referrals: {
     en: 'Coordination of referrals',
-    fr: 'Coordination des références',
+    fr: 'Coordination des références'
   },
   learn_more_concierge: {
     en: 'Learn More About Concierge Service',
-    fr: 'En savoir plus sur le service de conciergerie',
+    fr: 'En savoir plus sur le service de conciergerie'
   },
   did_you_know: {
     en: 'Did you know?',
-    fr: 'Le saviez-vous?',
+    fr: 'Le saviez-vous?'
   },
   concierge_saves_time: {
     en: 'Our concierge service helps corporate clients save an average of 20+ hours per year in healthcare administration and waiting time.',
-    fr: 'Notre service de conciergerie aide les clients corporatifs à économiser en moyenne plus de 20 heures par an en administration des soins de santé et en temps d\'attente.',
+    fr: 'Notre service de conciergerie aide les clients corporatifs à économiser en moyenne plus de 20 heures par an en administration des soins de santé et en temps d\'attente.'
   },
   employee_satisfaction: {
     en: 'Employee Satisfaction',
-    fr: 'Satisfaction des employés',
+    fr: 'Satisfaction des employés'
   },
   satisfaction_stat: {
     en: 'of our corporate clients report increased employee satisfaction with healthcare benefits',
-    fr: 'de nos clients corporatifs rapportent une satisfaction accrue des employés avec les avantages de soins de santé',
+    fr: 'de nos clients corporatifs rapportent une satisfaction accrue des employés avec les avantages de soins de santé'
   },
   rapid_access: {
     en: 'Rapid Access',
-    fr: 'Accès rapide',
+    fr: 'Accès rapide'
   },
   access_stat: {
     en: 'faster access to medical care compared to traditional healthcare routes',
-    fr: 'accès plus rapide aux soins médicaux par rapport aux voies de soins de santé traditionnelles',
+    fr: 'accès plus rapide aux soins médicaux par rapport aux voies de soins de santé traditionnelles'
   },
   peace_of_mind: {
     en: 'Peace of Mind',
-    fr: 'Tranquillité d\'esprit',
+    fr: 'Tranquillité d\'esprit'
   },
   peace_stat: {
     en: 'peace of mind for employees and their families with responsive healthcare access',
-    fr: 'tranquillité d\'esprit pour les employés et leurs familles avec un accès aux soins de santé réactif',
+    fr: 'tranquillité d\'esprit pour les employés et leurs familles avec un accès aux soins de santé réactif'
   },
   testimonials_title: {
     en: 'What Our Corporate Clients Say',
-    fr: 'Ce que disent nos clients corporatifs',
+    fr: 'Ce que disent nos clients corporatifs'
   },
   testimonials_subtitle: {
     en: 'Hear from business leaders who\'ve partnered with Physimed for their corporate healthcare needs.',
-    fr: 'Écoutez les dirigeants d\'entreprise qui se sont associés à Physimed pour leurs besoins en soins de santé corporatifs.',
+    fr: 'Écoutez les dirigeants d\'entreprise qui se sont associés à Physimed pour leurs besoins en soins de santé corporatifs.'
   },
   testimonial_chen: {
     en: 'The medical concierge service alone has been worth the investment. Being able to call and speak with a doctor within minutes has helped our employees address health concerns before they become serious issues.',
-    fr: 'Le service de conciergerie médicale à lui seul a valu l\'investissement. Pouvoir appeler et parler à un médecin en quelques minutes a aidé nos employés à résoudre leurs problèmes de santé avant qu\'ils ne deviennent graves.',
+    fr: 'Le service de conciergerie médicale à lui seul a valu l\'investissement. Pouvoir appeler et parler à un médecin en quelques minutes a aidé nos employés à résoudre leurs problèmes de santé avant qu\'ils ne deviennent graves.'
   },
   testimonial_sharma: {
     en: 'We\'ve seen lower absenteeism and higher employee satisfaction since partnering with Physimed. Their focus on preventative care aligns perfectly with our corporate wellness initiatives.',
-    fr: 'Nous avons constaté une diminution de l\'absentéisme et une plus grande satisfaction des employés depuis notre partenariat avec Physimed. Leur accent sur les soins préventifs s\'aligne parfaitement avec nos initiatives de bien-être en entreprise.',
+    fr: 'Nous avons constaté une diminution de l\'absentéisme et une plus grande satisfaction des employés depuis notre partenariat avec Physimed. Leur accent sur les soins préventifs s\'aligne parfaitement avec nos initiatives de bien-être en entreprise.'
   },
   testimonial_johnson: {
     en: 'Physimed\'s corporate plan has been invaluable for our executive team. The same-day appointments and comprehensive check-ups mean less time away from work and more focus on prevention.',
-    fr: 'Le plan corporatif de Physimed a été inestimable pour notre équipe de direction. Les rendez-vous le jour même et les bilans complets signifient moins de temps loin du travail et plus d\'accent sur la prévention.',
+    fr: 'Le plan corporatif de Physimed a été inestimable pour notre équipe de direction. Les rendez-vous le jour même et les bilans complets signifient moins de temps loin du travail et plus d\'accent sur la prévention.'
   },
   testimonial_anderson: {
     en: 'The quality of care is exceptional. Having our employees see the same doctor each visit has built trust and better health outcomes. It\'s healthcare as it should be.',
-    fr: 'La qualité des soins est exceptionnelle. Le fait que nos employés voient le même médecin à chaque visite a renforcé la confiance et amélioré les résultats de santé. Ce sont des soins de santé comme ils devraient être.',
+    fr: 'La qualité des soins est exceptionnelle. Le fait que nos employés voient le même médecin à chaque visite a renforcé la confiance et amélioré les résultats de santé. Ce sont des soins de santé comme ils devraient être.'
   },
   ceo: {
     en: 'CEO',
-    fr: 'PDG',
+    fr: 'PDG'
   },
   coo: {
     en: 'Chief Operating Officer',
-    fr: 'Directeur des opérations',
+    fr: 'Directeur des opérations'
   },
   hr_director: {
     en: 'HR Director',
-    fr: 'Directeur des RH',
+    fr: 'Directeur des RH'
   },
   vp_hr: {
     en: 'VP of Human Resources',
-    fr: 'VP des Ressources Humaines',
+    fr: 'VP des Ressources Humaines'
   },
   employee_satisfaction_stat: {
     en: 'Employee Satisfaction',
-    fr: 'Satisfaction des employés',
+    fr: 'Satisfaction des employés'
   },
   medical_support_stat: {
     en: 'Medical Support',
-    fr: 'Support médical',
+    fr: 'Support médical'
   },
   reduced_absenteeism_stat: {
     en: 'Reduced Absenteeism',
-    fr: 'Réduction de l\'absentéisme',
+    fr: 'Réduction de l\'absentéisme'
   },
   corporate_partners_stat: {
     en: 'Corporate Partners',
-    fr: 'Partenaires corporatifs',
+    fr: 'Partenaires corporatifs'
   },
   get_in_touch: {
     en: 'Get In Touch',
-    fr: 'Entrez en contact',
+    fr: 'Entrez en contact'
   },
   contact_us: {
     en: 'Contact Us',
-    fr: 'Contactez-nous',
+    fr: 'Contactez-nous'
   },
   contact_subtitle: {
     en: 'Have questions about our corporate medical plans? Reach out to our team for personalized assistance.',
-    fr: 'Vous avez des questions sur nos forfaits médicaux corporatifs? Contactez notre équipe pour une assistance personnalisée.',
+    fr: 'Vous avez des questions sur nos forfaits médicaux corporatifs? Contactez notre équipe pour une assistance personnalisée.'
   },
   send_us_message: {
     en: 'Send Us a Message',
-    fr: 'Envoyez-nous un message',
+    fr: 'Envoyez-nous un message'
   },
   your_name: {
     en: 'Your Name',
-    fr: 'Votre nom',
+    fr: 'Votre nom'
   },
   john_doe: {
     en: 'John Doe',
-    fr: 'Jean Dupont',
+    fr: 'Jean Dupont'
   },
   email_address: {
     en: 'Email Address',
-    fr: 'Adresse courriel',
+    fr: 'Adresse courriel'
   },
   email_placeholder: {
     en: 'your@email.com',
-    fr: 'votre@courriel.com',
+    fr: 'votre@courriel.com'
   },
   phone_number: {
     en: 'Phone Number',
-    fr: 'Numéro de téléphone',
+    fr: 'Numéro de téléphone'
   },
   phone_placeholder: {
     en: '(555) 123-4567',
-    fr: '(555) 123-4567',
+    fr: '(555) 123-4567'
   },
   subject: {
     en: 'Subject',
-    fr: 'Sujet',
+    fr: 'Sujet'
   },
   select_subject: {
     en: 'Select a subject',
-    fr: 'Sélectionnez un sujet',
+    fr: 'Sélectionnez un sujet'
   },
   corporate_plans_option: {
     en: 'Corporate Plans',
-    fr: 'Forfaits corporatifs',
+    fr: 'Forfaits corporatifs'
   },
   health_checkup_option: {
     en: 'Health Check-Up',
-    fr: 'Bilan de santé',
+    fr: 'Bilan de santé'
   },
   concierge_service_option: {
     en: 'Concierge Service',
-    fr: 'Service de conciergerie',
+    fr: 'Service de conciergerie'
   },
   booking_inquiry: {
     en: 'Booking Inquiry',
-    fr: 'Demande de réservation',
+    fr: 'Demande de réservation'
   },
   other_option: {
     en: 'Other',
-    fr: 'Autre',
+    fr: 'Autre'
   },
   your_message: {
     en: 'Your Message',
-    fr: 'Votre message',
+    fr: 'Votre message'
   },
   message_placeholder: {
     en: 'How can we help you?',
-    fr: 'Comment pouvons-nous vous aider?',
+    fr: 'Comment pouvons-nous vous aider?'
   },
   attachments_optional: {
     en: 'Attachments (optional)',
-    fr: 'Pièces jointes (optionnel)',
+    fr: 'Pièces jointes (optionnel)'
   },
   upload_files: {
     en: 'Click to upload files',
-    fr: 'Cliquez pour téléverser des fichiers',
+    fr: 'Cliquez pour téléverser des fichiers'
   },
   files_selected: {
     en: 'file(s) selected',
-    fr: 'fichier(s) sélectionné(s)',
+    fr: 'fichier(s) sélectionné(s)'
   },
   privacy_consent: {
     en: 'I agree to the privacy policy and consent to being contacted.',
-    fr: 'J\'accepte la politique de confidentialité et je consens à être contacté.',
+    fr: 'J\'accepte la politique de confidentialité et je consens à être contacté.'
   },
   privacy_policy: {
     en: 'privacy policy',
-    fr: 'politique de confidentialité',
+    fr: 'politique de confidentialité'
   },
   contact_information: {
     en: 'Contact Information',
-    fr: 'Coordonnées',
+    fr: 'Coordonnées'
   },
   phone_label: {
     en: 'Phone',
-    fr: 'Téléphone',
+    fr: 'Téléphone'
   },
   toll_free: {
     en: '1-800-363-6737 (Toll-Free)',
-    fr: '1-800-363-6737 (Sans frais)',
+    fr: '1-800-363-6737 (Sans frais)'
   },
   email_label: {
     en: 'Email',
-    fr: 'Courriel',
+    fr: 'Courriel'
   },
   address_label: {
     en: 'Address',
-    fr: 'Adresse',
+    fr: 'Adresse'
   },
   hours_operation: {
     en: 'Hours of Operation',
-    fr: 'Heures d\'ouverture',
+    fr: 'Heures d\'ouverture'
   },
   monday_friday: {
     en: 'Monday - Friday:',
-    fr: 'Lundi - Vendredi:',
+    fr: 'Lundi - Vendredi:'
   },
   saturday: {
     en: 'Saturday:',
-    fr: 'Samedi:',
+    fr: 'Samedi:'
   },
   sunday: {
     en: 'Sunday:',
-    fr: 'Dimanche:',
+    fr: 'Dimanche:'
   },
   corporate_inquiries: {
     en: 'Corporate Inquiries',
-    fr: 'Demandes corporatives',
+    fr: 'Demandes corporatives'
   },
   corp_inquiries_text: {
     en: 'For corporate plan inquiries, please contact our corporate services team:',
-    fr: 'Pour les demandes concernant les forfaits corporatifs, veuillez contacter notre équipe de services corporatifs:',
+    fr: 'Pour les demandes concernant les forfaits corporatifs, veuillez contacter notre équipe de services corporatifs:'
   },
   premium_healthcare: {
     en: 'Premium healthcare services for professionals.',
-    fr: 'Services de santé premium pour professionnels.',
+    fr: 'Services de santé premium pour professionnels.'
   },
   quick_links: {
     en: 'Quick Links',
-    fr: 'Liens rapides',
+    fr: 'Liens rapides'
   },
   home_link: {
     en: 'Home',
-    fr: 'Accueil',
+    fr: 'Accueil'
   },
   our_services: {
     en: 'Our Services',
-    fr: 'Nos services',
+    fr: 'Nos services'
   },
   pricing_plans: {
     en: 'Pricing Plans',
-    fr: 'Forfaits tarifaires',
+    fr: 'Forfaits tarifaires'
   },
   book_appointment: {
     en: 'Book Appointment',
-    fr: 'Prendre rendez-vous',
+    fr: 'Prendre rendez-vous'
   },
   about_us: {
     en: 'About Us',
-    fr: 'À propos de nous',
+    fr: 'À propos de nous'
   },
   newsletter: {
     en: 'Newsletter',
-    fr: 'Infolettre',
+    fr: 'Infolettre'
   },
   newsletter_text: {
     en: 'Stay updated with our latest health services.',
-    fr: 'Restez informé de nos derniers services de santé.',
+    fr: 'Restez informé de nos derniers services de santé.'
   },
   email_placeholder_newsletter: {
     en: 'Your email address',
-    fr: 'Votre adresse courriel',
+    fr: 'Votre adresse courriel'
   },
   subscribe: {
     en: 'Subscribe',
-    fr: 'S\'abonner',
+    fr: 'S\'abonner'
   },
   all_rights_reserved: {
     en: 'All rights reserved.',
-    fr: 'Tous droits réservés.',
+    fr: 'Tous droits réservés.'
   },
   privacy_policy_link: {
     en: 'Privacy Policy',
-    fr: 'Politique de confidentialité',
+    fr: 'Politique de confidentialité'
   },
   terms_of_service: {
     en: 'Terms of Service',
-    fr: 'Conditions d\'utilisation',
-  },
+    fr: 'Conditions d\'utilisation'
+  }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
