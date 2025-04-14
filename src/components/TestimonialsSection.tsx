@@ -11,55 +11,57 @@ import {
 } from "@/components/ui/carousel";
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Card, CardContent } from "@/components/ui/card";
-
-const testimonials = [
-  {
-    quote: "Physimed's corporate plan has been invaluable for our executive team. The same-day appointments and comprehensive check-ups mean less time away from work and more focus on prevention.",
-    author: "Sarah Johnson",
-    position: "HR Director",
-    company: "Tech Innovations Inc.",
-    rating: 5
-  },
-  {
-    quote: "The medical concierge service alone has been worth the investment. Being able to call and speak with a doctor within minutes has helped our employees address health concerns before they become serious issues.",
-    author: "Michael Chen",
-    position: "CEO",
-    company: "Global Finance Partners",
-    rating: 5
-  },
-  {
-    quote: "We've seen lower absenteeism and higher employee satisfaction since partnering with Physimed. Their focus on preventative care aligns perfectly with our corporate wellness initiatives.",
-    author: "Priya Sharma",
-    position: "Chief Operating Officer",
-    company: "NexGen Solutions",
-    rating: 5
-  },
-  {
-    quote: "The quality of care is exceptional. Having our employees see the same doctor each visit has built trust and better health outcomes. It's healthcare as it should be.",
-    author: "Robert Anderson",
-    position: "VP of Human Resources",
-    company: "Meridian Construction",
-    rating: 5
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const AUTO_ROTATION_INTERVAL = 5000; // 5 seconds
 
 export default function TestimonialsSection() {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const isMobile = useIsMobile();
+  
+  const testimonials = [
+    {
+      quote: t("testimonial_johnson"),
+      author: "Sarah Johnson",
+      position: t("hr_director"),
+      company: "Tech Innovations Inc.",
+      rating: 5
+    },
+    {
+      quote: t("testimonial_chen"),
+      author: "Michael Chen",
+      position: t("ceo"),
+      company: "Global Finance Partners",
+      rating: 5
+    },
+    {
+      quote: t("testimonial_sharma"),
+      author: "Priya Sharma",
+      position: t("coo"),
+      company: "NexGen Solutions",
+      rating: 5
+    },
+    {
+      quote: t("testimonial_anderson"),
+      author: "Robert Anderson",
+      position: t("vp_hr"),
+      company: "Meridian Construction",
+      rating: 5
+    }
+  ];
   
   const handlePrev = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
-  }, []);
+  }, [testimonials.length]);
 
   const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
-  }, []);
+  }, [testimonials.length]);
   
   // Auto-rotate testimonials
   useEffect(() => {
@@ -94,10 +96,10 @@ export default function TestimonialsSection() {
             <span className="text-physimed font-medium">Testimonials</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mt-2 mb-6 text-gradient">
-            What Our Corporate Clients Say
+            {t("testimonials_title")}
           </h2>
           <p className="text-gray-600 text-lg">
-            Hear from business leaders who've partnered with Physimed for their corporate healthcare needs.
+            {t("testimonials_subtitle")}
           </p>
         </div>
         
@@ -207,22 +209,22 @@ export default function TestimonialsSection() {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center max-w-4xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-physimed">93%</h3>
-            <p className="text-gray-600 text-sm mt-2">Employee Satisfaction</p>
+            <p className="text-gray-600 text-sm mt-2">{t("employee_satisfaction_stat")}</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-physimed">24/7</h3>
-            <p className="text-gray-600 text-sm mt-2">Medical Support</p>
+            <p className="text-gray-600 text-sm mt-2">{t("medical_support_stat")}</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-physimed">15%</h3>
-            <p className="text-gray-600 text-sm mt-2">Reduced Absenteeism</p>
+            <p className="text-gray-600 text-sm mt-2">{t("reduced_absenteeism_stat")}</p>
           </div>
           
           <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="text-3xl font-bold text-physimed">100+</h3>
-            <p className="text-gray-600 text-sm mt-2">Corporate Partners</p>
+            <p className="text-gray-600 text-sm mt-2">{t("corporate_partners_stat")}</p>
           </div>
         </div>
       </div>

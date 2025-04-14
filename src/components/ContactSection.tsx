@@ -5,8 +5,10 @@ import { Mail, Phone, MapPin, Send, Upload } from 'lucide-react';
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from 'sonner';
 import { Input } from "@/components/ui/input";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -57,24 +59,24 @@ export default function ContactSection() {
     <section className="py-20 bg-gray-50" id="contact">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-physimed font-medium">Get In Touch</span>
+          <span className="text-physimed font-medium">{t("get_in_touch")}</span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
-            Contact Us
+            {t("contact_us")}
           </h2>
           <p className="text-gray-600">
-            Have questions about our corporate medical plans? Reach out to our team for personalized assistance.
+            {t("contact_subtitle")}
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-white rounded-xl shadow-sm p-8">
-            <h3 className="text-2xl font-serif font-semibold mb-6">Send Us a Message</h3>
+            <h3 className="text-2xl font-serif font-semibold mb-6">{t("send_us_message")}</h3>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-700">
-                    Your Name
+                    {t("your_name")}
                   </label>
                   <input
                     type="text"
@@ -83,14 +85,14 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
-                    placeholder="John Doe"
+                    placeholder={t("john_doe")}
                     required
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-700">
-                    Email Address
+                    {t("email_address")}
                   </label>
                   <input
                     type="email"
@@ -99,7 +101,7 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
-                    placeholder="your@email.com"
+                    placeholder={t("email_placeholder")}
                     required
                   />
                 </div>
@@ -108,7 +110,7 @@ export default function ContactSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="phone" className="block mb-2 text-sm font-medium text-gray-700">
-                    Phone Number
+                    {t("phone_number")}
                   </label>
                   <input
                     type="tel"
@@ -117,13 +119,13 @@ export default function ContactSection() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
-                    placeholder="(555) 123-4567"
+                    placeholder={t("phone_placeholder")}
                   />
                 </div>
                 
                 <div>
                   <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-700">
-                    Subject
+                    {t("subject")}
                   </label>
                   <select
                     id="subject"
@@ -133,19 +135,19 @@ export default function ContactSection() {
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
                     required
                   >
-                    <option value="">Select a subject</option>
-                    <option value="Corporate Plans">Corporate Plans</option>
-                    <option value="Health Check-Up">Health Check-Up</option>
-                    <option value="Concierge Service">Concierge Service</option>
-                    <option value="Booking">Booking Inquiry</option>
-                    <option value="Other">Other</option>
+                    <option value="">{t("select_subject")}</option>
+                    <option value="Corporate Plans">{t("corporate_plans_option")}</option>
+                    <option value="Health Check-Up">{t("health_checkup_option")}</option>
+                    <option value="Concierge Service">{t("concierge_service_option")}</option>
+                    <option value="Booking">{t("booking_inquiry")}</option>
+                    <option value="Other">{t("other_option")}</option>
                   </select>
                 </div>
               </div>
               
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-700">
-                  Your Message
+                  {t("your_message")}
                 </label>
                 <Textarea
                   id="message"
@@ -153,14 +155,14 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleChange}
                   className="w-full h-64 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
-                  placeholder="How can we help you?"
+                  placeholder={t("message_placeholder")}
                   required
                 />
               </div>
               
               <div>
                 <label htmlFor="file-upload" className="block mb-2 text-sm font-medium text-gray-700">
-                  Attachments (optional)
+                  {t("attachments_optional")}
                 </label>
                 <div className="flex items-center space-x-2">
                   <Input
@@ -178,8 +180,8 @@ export default function ContactSection() {
                       <Upload size={18} className="mr-2 text-gray-500" />
                       <span className="text-gray-500">
                         {files && files.length > 0 
-                          ? `${files.length} file${files.length > 1 ? 's' : ''} selected` 
-                          : 'Click to upload files'}
+                          ? `${files.length} ${t("files_selected")}` 
+                          : t("upload_files")}
                       </span>
                     </label>
                   </div>
@@ -204,7 +206,7 @@ export default function ContactSection() {
                   required
                 />
                 <label htmlFor="privacy" className="ml-2 block text-sm text-gray-600">
-                  I agree to the <a href="/privacy-policy" className="text-physimed hover:underline">privacy policy</a> and consent to being contacted.
+                  {t("privacy_consent")}
                 </label>
               </div>
               
@@ -212,7 +214,7 @@ export default function ContactSection() {
                 type="submit" 
                 className="bg-physimed hover:bg-physimed-700 text-white flex items-center"
               >
-                Send Message
+                {t("send_message")}
                 <Send size={16} className="ml-2" />
               </Button>
             </form>
@@ -220,22 +222,22 @@ export default function ContactSection() {
           
           <div>
             <div className="bg-physimed-800 text-white rounded-xl shadow-sm p-8 mb-8">
-              <h3 className="text-2xl font-serif font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-serif font-semibold mb-6">{t("contact_information")}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 text-physimed-100 mr-4 mt-1" />
                   <div>
-                    <p className="font-medium">Phone</p>
+                    <p className="font-medium">{t("phone_label")}</p>
                     <p className="text-white/80">514-747-8192</p>
-                    <p className="text-white/80">1-800-363-6737 (Toll-Free)</p>
+                    <p className="text-white/80">{t("toll_free")}</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <Mail className="h-6 w-6 text-physimed-100 mr-4 mt-1" />
                   <div>
-                    <p className="font-medium">Email</p>
+                    <p className="font-medium">{t("email_label")}</p>
                     <p className="text-white/80">corporate@physimed.com</p>
                     <p className="text-white/80">info@physimed.com</p>
                   </div>
@@ -244,7 +246,7 @@ export default function ContactSection() {
                 <div className="flex items-start">
                   <MapPin className="h-6 w-6 text-physimed-100 mr-4 mt-1" />
                   <div>
-                    <p className="font-medium">Address</p>
+                    <p className="font-medium">{t("address_label")}</p>
                     <p className="text-white/80">
                       6363 Trans-Canada Highway,<br />
                       Suite 400, St-Laurent,<br />
@@ -255,18 +257,18 @@ export default function ContactSection() {
               </div>
               
               <div className="mt-8">
-                <h4 className="font-medium mb-3">Hours of Operation</h4>
+                <h4 className="font-medium mb-3">{t("hours_operation")}</h4>
                 <ul className="space-y-1 text-white/80">
                   <li className="flex justify-between">
-                    <span>Monday - Friday:</span>
+                    <span>{t("monday_friday")}</span>
                     <span>7:00 AM - 9:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Saturday:</span>
+                    <span>{t("saturday")}</span>
                     <span>8:00 AM - 5:00 PM</span>
                   </li>
                   <li className="flex justify-between">
-                    <span>Sunday:</span>
+                    <span>{t("sunday")}</span>
                     <span>8:00 AM - 5:00 PM</span>
                   </li>
                 </ul>
@@ -274,9 +276,9 @@ export default function ContactSection() {
             </div>
             
             <div className="bg-white rounded-xl shadow-sm p-8">
-              <h3 className="text-xl font-serif font-semibold mb-4">Corporate Inquiries</h3>
+              <h3 className="text-xl font-serif font-semibold mb-4">{t("corporate_inquiries")}</h3>
               <p className="text-gray-600 mb-4">
-                For corporate plan inquiries, please contact our corporate services team:
+                {t("corp_inquiries_text")}
               </p>
               
               <div className="flex items-center space-x-4">

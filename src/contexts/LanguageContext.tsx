@@ -624,6 +624,258 @@ const translations: Translations = {
     en: 'peace of mind for employees and their families with responsive healthcare access',
     fr: 'tranquillité d\'esprit pour les employés et leurs familles avec un accès aux soins de santé réactif',
   },
+  testimonials_title: {
+    en: 'What Our Corporate Clients Say',
+    fr: 'Ce que disent nos clients corporatifs',
+  },
+  testimonials_subtitle: {
+    en: 'Hear from business leaders who\'ve partnered with Physimed for their corporate healthcare needs.',
+    fr: 'Écoutez les dirigeants d\'entreprise qui se sont associés à Physimed pour leurs besoins en soins de santé corporatifs.',
+  },
+  testimonial_chen: {
+    en: 'The medical concierge service alone has been worth the investment. Being able to call and speak with a doctor within minutes has helped our employees address health concerns before they become serious issues.',
+    fr: 'Le service de conciergerie médicale à lui seul a valu l\'investissement. Pouvoir appeler et parler à un médecin en quelques minutes a aidé nos employés à résoudre leurs problèmes de santé avant qu\'ils ne deviennent graves.',
+  },
+  testimonial_sharma: {
+    en: 'We\'ve seen lower absenteeism and higher employee satisfaction since partnering with Physimed. Their focus on preventative care aligns perfectly with our corporate wellness initiatives.',
+    fr: 'Nous avons constaté une diminution de l\'absentéisme et une plus grande satisfaction des employés depuis notre partenariat avec Physimed. Leur accent sur les soins préventifs s\'aligne parfaitement avec nos initiatives de bien-être en entreprise.',
+  },
+  testimonial_johnson: {
+    en: 'Physimed\'s corporate plan has been invaluable for our executive team. The same-day appointments and comprehensive check-ups mean less time away from work and more focus on prevention.',
+    fr: 'Le plan corporatif de Physimed a été inestimable pour notre équipe de direction. Les rendez-vous le jour même et les bilans complets signifient moins de temps loin du travail et plus d\'accent sur la prévention.',
+  },
+  testimonial_anderson: {
+    en: 'The quality of care is exceptional. Having our employees see the same doctor each visit has built trust and better health outcomes. It\'s healthcare as it should be.',
+    fr: 'La qualité des soins est exceptionnelle. Le fait que nos employés voient le même médecin à chaque visite a renforcé la confiance et amélioré les résultats de santé. Ce sont des soins de santé comme ils devraient être.',
+  },
+  ceo: {
+    en: 'CEO',
+    fr: 'PDG',
+  },
+  coo: {
+    en: 'Chief Operating Officer',
+    fr: 'Directeur des opérations',
+  },
+  hr_director: {
+    en: 'HR Director',
+    fr: 'Directeur des RH',
+  },
+  vp_hr: {
+    en: 'VP of Human Resources',
+    fr: 'VP des Ressources Humaines',
+  },
+  employee_satisfaction_stat: {
+    en: 'Employee Satisfaction',
+    fr: 'Satisfaction des employés',
+  },
+  medical_support_stat: {
+    en: 'Medical Support',
+    fr: 'Support médical',
+  },
+  reduced_absenteeism_stat: {
+    en: 'Reduced Absenteeism',
+    fr: 'Réduction de l\'absentéisme',
+  },
+  corporate_partners_stat: {
+    en: 'Corporate Partners',
+    fr: 'Partenaires corporatifs',
+  },
+  get_in_touch: {
+    en: 'Get In Touch',
+    fr: 'Entrez en contact',
+  },
+  contact_us: {
+    en: 'Contact Us',
+    fr: 'Contactez-nous',
+  },
+  contact_subtitle: {
+    en: 'Have questions about our corporate medical plans? Reach out to our team for personalized assistance.',
+    fr: 'Vous avez des questions sur nos forfaits médicaux corporatifs? Contactez notre équipe pour une assistance personnalisée.',
+  },
+  send_us_message: {
+    en: 'Send Us a Message',
+    fr: 'Envoyez-nous un message',
+  },
+  your_name: {
+    en: 'Your Name',
+    fr: 'Votre nom',
+  },
+  john_doe: {
+    en: 'John Doe',
+    fr: 'Jean Dupont',
+  },
+  email_address: {
+    en: 'Email Address',
+    fr: 'Adresse courriel',
+  },
+  email_placeholder: {
+    en: 'your@email.com',
+    fr: 'votre@courriel.com',
+  },
+  phone_number: {
+    en: 'Phone Number',
+    fr: 'Numéro de téléphone',
+  },
+  phone_placeholder: {
+    en: '(555) 123-4567',
+    fr: '(555) 123-4567',
+  },
+  subject: {
+    en: 'Subject',
+    fr: 'Sujet',
+  },
+  select_subject: {
+    en: 'Select a subject',
+    fr: 'Sélectionnez un sujet',
+  },
+  corporate_plans_option: {
+    en: 'Corporate Plans',
+    fr: 'Forfaits corporatifs',
+  },
+  health_checkup_option: {
+    en: 'Health Check-Up',
+    fr: 'Bilan de santé',
+  },
+  concierge_service_option: {
+    en: 'Concierge Service',
+    fr: 'Service de conciergerie',
+  },
+  booking_inquiry: {
+    en: 'Booking Inquiry',
+    fr: 'Demande de réservation',
+  },
+  other_option: {
+    en: 'Other',
+    fr: 'Autre',
+  },
+  your_message: {
+    en: 'Your Message',
+    fr: 'Votre message',
+  },
+  message_placeholder: {
+    en: 'How can we help you?',
+    fr: 'Comment pouvons-nous vous aider?',
+  },
+  attachments_optional: {
+    en: 'Attachments (optional)',
+    fr: 'Pièces jointes (optionnel)',
+  },
+  upload_files: {
+    en: 'Click to upload files',
+    fr: 'Cliquez pour téléverser des fichiers',
+  },
+  files_selected: {
+    en: 'file(s) selected',
+    fr: 'fichier(s) sélectionné(s)',
+  },
+  privacy_consent: {
+    en: 'I agree to the privacy policy and consent to being contacted.',
+    fr: 'J\'accepte la politique de confidentialité et je consens à être contacté.',
+  },
+  privacy_policy: {
+    en: 'privacy policy',
+    fr: 'politique de confidentialité',
+  },
+  contact_information: {
+    en: 'Contact Information',
+    fr: 'Coordonnées',
+  },
+  phone_label: {
+    en: 'Phone',
+    fr: 'Téléphone',
+  },
+  toll_free: {
+    en: '1-800-363-6737 (Toll-Free)',
+    fr: '1-800-363-6737 (Sans frais)',
+  },
+  email_label: {
+    en: 'Email',
+    fr: 'Courriel',
+  },
+  address_label: {
+    en: 'Address',
+    fr: 'Adresse',
+  },
+  hours_operation: {
+    en: 'Hours of Operation',
+    fr: 'Heures d\'ouverture',
+  },
+  monday_friday: {
+    en: 'Monday - Friday:',
+    fr: 'Lundi - Vendredi:',
+  },
+  saturday: {
+    en: 'Saturday:',
+    fr: 'Samedi:',
+  },
+  sunday: {
+    en: 'Sunday:',
+    fr: 'Dimanche:',
+  },
+  corporate_inquiries: {
+    en: 'Corporate Inquiries',
+    fr: 'Demandes corporatives',
+  },
+  corp_inquiries_text: {
+    en: 'For corporate plan inquiries, please contact our corporate services team:',
+    fr: 'Pour les demandes concernant les forfaits corporatifs, veuillez contacter notre équipe de services corporatifs:',
+  },
+  premium_healthcare: {
+    en: 'Premium healthcare services for professionals.',
+    fr: 'Services de santé premium pour professionnels.',
+  },
+  quick_links: {
+    en: 'Quick Links',
+    fr: 'Liens rapides',
+  },
+  home_link: {
+    en: 'Home',
+    fr: 'Accueil',
+  },
+  our_services: {
+    en: 'Our Services',
+    fr: 'Nos services',
+  },
+  pricing_plans: {
+    en: 'Pricing Plans',
+    fr: 'Forfaits tarifaires',
+  },
+  book_appointment: {
+    en: 'Book Appointment',
+    fr: 'Prendre rendez-vous',
+  },
+  about_us: {
+    en: 'About Us',
+    fr: 'À propos de nous',
+  },
+  newsletter: {
+    en: 'Newsletter',
+    fr: 'Infolettre',
+  },
+  newsletter_text: {
+    en: 'Stay updated with our latest health services.',
+    fr: 'Restez informé de nos derniers services de santé.',
+  },
+  email_placeholder_newsletter: {
+    en: 'Your email address',
+    fr: 'Votre adresse courriel',
+  },
+  subscribe: {
+    en: 'Subscribe',
+    fr: 'S\'abonner',
+  },
+  all_rights_reserved: {
+    en: 'All rights reserved.',
+    fr: 'Tous droits réservés.',
+  },
+  privacy_policy_link: {
+    en: 'Privacy Policy',
+    fr: 'Politique de confidentialité',
+  },
+  terms_of_service: {
+    en: 'Terms of Service',
+    fr: 'Conditions d\'utilisation',
+  },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

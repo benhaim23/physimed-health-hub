@@ -1,8 +1,11 @@
 
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Twitter, Linkedin, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -15,7 +18,7 @@ export default function Footer() {
               className="h-14 w-auto" 
             />
             <p className="text-gray-600 max-w-xs">
-              Premium healthcare services for professionals.
+              {t("premium_healthcare")}
             </p>
             <div className="flex space-x-4 pt-1">
               <a href="https://www.facebook.com" className="text-gray-500 hover:text-physimed transition-colors">
@@ -35,20 +38,20 @@ export default function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">{t("quick_links")}</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-600 hover:text-physimed transition-colors">Home</Link></li>
-              <li><Link to="/services" className="text-gray-600 hover:text-physimed transition-colors">Our Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-600 hover:text-physimed transition-colors">Pricing Plans</Link></li>
-              <li><Link to="/booking" className="text-gray-600 hover:text-physimed transition-colors">Book Appointment</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-physimed transition-colors">Contact Us</Link></li>
-              <li><Link to="/about" className="text-gray-600 hover:text-physimed transition-colors">About Us</Link></li>
+              <li><Link to="/" className="text-gray-600 hover:text-physimed transition-colors">{t("home_link")}</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-physimed transition-colors">{t("our_services")}</Link></li>
+              <li><Link to="/pricing" className="text-gray-600 hover:text-physimed transition-colors">{t("pricing_plans")}</Link></li>
+              <li><Link to="/booking" className="text-gray-600 hover:text-physimed transition-colors">{t("book_appointment")}</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-physimed transition-colors">{t("contact_us")}</Link></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-physimed transition-colors">{t("about_us")}</Link></li>
             </ul>
           </div>
           
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Contact Us</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">{t("contact_us")}</h3>
             <ul className="space-y-2">
               <li className="flex items-start">
                 <Phone size={16} className="text-physimed mt-1 mr-2 flex-shrink-0" />
@@ -65,8 +68,8 @@ export default function Footer() {
               <li className="flex items-start">
                 <Clock size={16} className="text-physimed mt-1 mr-2 flex-shrink-0" />
                 <div className="text-gray-600 text-sm">
-                  <p>Mon-Fri: 7am-9pm</p>
-                  <p>Sat-Sun: 8am-5pm</p>
+                  <p>{t("monday_friday").replace(':', '')}: 7am-9pm</p>
+                  <p>{t("saturday").replace(':', '')}-{t("sunday").replace(':', '')}: 8am-5pm</p>
                 </div>
               </li>
             </ul>
@@ -74,29 +77,29 @@ export default function Footer() {
           
           {/* Newsletter */}
           <div>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Newsletter</h3>
-            <p className="text-gray-600 mb-3 text-sm">Stay updated with our latest health services.</p>
+            <h3 className="text-lg font-semibold text-gray-800 mb-3">{t("newsletter")}</h3>
+            <p className="text-gray-600 mb-3 text-sm">{t("newsletter_text")}</p>
             <form className="space-y-2">
               <input 
                 type="email" 
-                placeholder="Your email address" 
+                placeholder={t("email_placeholder_newsletter")} 
                 className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-physimed focus:border-physimed text-sm"
               />
               <button 
                 type="submit" 
                 className="w-full px-3 py-2 bg-physimed text-white rounded-md hover:bg-physimed-700 transition duration-300 text-sm font-medium"
               >
-                Subscribe
+                {t("subscribe")}
               </button>
             </form>
           </div>
         </div>
         
         <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-xs">&copy; {new Date().getFullYear()} All rights reserved.</p>
+          <p className="text-gray-500 text-xs">&copy; {new Date().getFullYear()} {t("all_rights_reserved")}</p>
           <div className="flex space-x-4 mt-3 md:mt-0">
-            <Link to="/privacy-policy" className="text-gray-500 text-xs hover:text-physimed">Privacy Policy</Link>
-            <Link to="/terms-of-service" className="text-gray-500 text-xs hover:text-physimed">Terms of Service</Link>
+            <Link to="/privacy-policy" className="text-gray-500 text-xs hover:text-physimed">{t("privacy_policy_link")}</Link>
+            <Link to="/terms-of-service" className="text-gray-500 text-xs hover:text-physimed">{t("terms_of_service")}</Link>
             <Link to="/faq" className="text-gray-500 text-xs hover:text-physimed">FAQ</Link>
           </div>
         </div>
