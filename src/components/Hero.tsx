@@ -60,37 +60,18 @@ export default function Hero() {
           <div className="relative lg:h-[600px] flex flex-col items-center justify-center">
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
             
-            {/* Pamphlet image with styling */}
+            {/* New image with professional medical styling */}
             <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-[90%] pamphlet-container transform hover:scale-[1.02] transition-transform duration-300">
               <img 
-                src="/lovable-uploads/cccb7e3f-92ec-4b8c-ad70-74247d7dddf8.png" 
-                alt="Physimed Health Checkup Pamphlet" 
+                src="/lovable-uploads/572aca0a-b922-4887-ac72-b7913774af8c.png" 
+                alt="Physimed Health Check-up" 
                 className="w-full h-auto object-contain"
               />
-              
-              {/* Page curl effect */}
-              <div className="absolute top-0 right-0 w-16 h-16 bg-gray-100 shadow-inner transform rotate-45 translate-x-8 -translate-y-8"></div>
-              
-              {/* Bottom branding bar */}
-              <div className="absolute bottom-0 left-0 right-0 h-12 bg-physimed flex items-center justify-center">
-                <span className="text-white font-medium tracking-wider text-sm">WWW.PHYSIMED.COM</span>
-              </div>
             </div>
-            
-            {/* Download button with improved styling */}
-            <Button 
-              onClick={handleDownloadPamphlet}
-              className="mt-6 bg-physimed hover:bg-physimed-800 text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 hover:translate-y-[-2px]"
-            >
-              <FileDown className="h-5 w-5" />
-              {t("download_brochure")}
-            </Button>
-            
-            <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-physimed-50 blur-xl opacity-60 float-animation"></div>
-            <div className="absolute -top-10 -left-10 h-24 w-24 rounded-full bg-blue-50 blur-xl opacity-40 float-animation"></div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
