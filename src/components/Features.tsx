@@ -1,49 +1,101 @@
 
-import { ArrowRight, Stethoscope, Clock, ClipboardCheck, Users, Building, Calendar, HeartPulse, FilePlus } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { 
+  Stethoscope, 
+  Clock, 
+  ClipboardCheck, 
+  Users, 
+  Building, 
+  HeartPulse, 
+  Calendar, 
+  FilePlus,
+  ArrowRight
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const features = [
   {
-    icon: <Clock className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <Clock className="h-8 w-8 text-physimed" />,
     title: "Same-Day Appointments",
     description: "No long waits for essential care. Get seen when you need it most with our priority scheduling system."
   },
   {
-    icon: <Stethoscope className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <Stethoscope className="h-8 w-8 text-physimed" />,
     title: "Personalized Medical Care",
     description: "Tailored care plans based on each patient's age, history, and risk factors for truly individualized medicine."
   },
   {
-    icon: <Users className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <Users className="h-8 w-8 text-physimed" />,
     title: "Consistent Follow-Up",
     description: "Build a relationship with your doctor. Always see the same physician who knows your history and needs."
   },
   {
-    icon: <Building className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <Building className="h-8 w-8 text-physimed" />,
     title: "All-In-One Facility",
     description: "Consultations, lab tests, diagnostics, and specialists—all coordinated for you in one convenient location."
   },
   {
-    icon: <HeartPulse className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <HeartPulse className="h-8 w-8 text-physimed" />,
     title: "Proactive & Preventative",
     description: "We focus on long-term health maintenance and disease prevention, not just treating symptoms."
   },
   {
-    icon: <Calendar className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <Calendar className="h-8 w-8 text-physimed" />,
     title: "7-Day Availability",
     description: "Medical support when you need it with extended hours and weekend availability for busy professionals."
   },
   {
-    icon: <ClipboardCheck className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <ClipboardCheck className="h-8 w-8 text-physimed" />,
     title: "Comprehensive Assessments",
     description: "Thorough check-ups include physical, laboratory, and specialized tests for a complete health picture."
   },
   {
-    icon: <FilePlus className="h-8 w-8 mb-4 text-physimed" />,
+    icon: <FilePlus className="h-8 w-8 text-physimed" />,
     title: "Digital Medical Records",
     description: "Secure electronic health records ensure your medical information is always accessible to your care team."
   }
 ];
+
+const Feature = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature",
+        (index === 0 || index === 4) && "lg:border-l border-gray-200 dark:border-gray-800",
+        index < 4 && "lg:border-b border-gray-200 dark:border-gray-800"
+      )}
+    >
+      {index < 4 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-physimed-50 to-transparent pointer-events-none" />
+      )}
+      {index >= 4 && (
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-physimed-50 to-transparent pointer-events-none" />
+      )}
+      <div className="mb-4 relative z-10 px-10 text-physimed">
+        {icon}
+      </div>
+      <div className="text-lg font-bold mb-2 relative z-10 px-10">
+        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-gray-300 dark:bg-gray-700 group-hover/feature:bg-physimed transition-all duration-200 origin-center" />
+        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-gray-800 dark:text-gray-100">
+          {title}
+        </span>
+      </div>
+      <p className="text-sm text-gray-600 dark:text-gray-300 max-w-xs relative z-10 px-10">
+        {description}
+      </p>
+    </div>
+  );
+};
 
 export default function Features() {
   return (
@@ -59,16 +111,15 @@ export default function Features() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-            >
-              {feature.icon}
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
+            <Feature 
+              key={index}
+              title={feature.title}
+              description={feature.description}
+              icon={feature.icon}
+              index={index}
+            />
           ))}
         </div>
         
