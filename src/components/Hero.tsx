@@ -57,14 +57,11 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative lg:h-[500px] flex flex-col items-center justify-center">
-            <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
-            
-            {/* Health check-up image */}
-            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-full pamphlet-container transform hover:scale-[1.02] transition-transform duration-300 mb-4">
+          <div className="flex flex-col items-center justify-center">
+            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden w-full mb-4">
               <img 
-                src="/lovable-uploads/d997a0a1-4eee-4c2b-b39d-cb92398bb79d.png" 
-                alt="Physimed Health Check-up" 
+                src="/lovable-uploads/0cc8fd6a-d0a5-40a5-bc8a-f3fb71ef1641.png" 
+                alt="Health Check-up Brochure" 
                 className="w-full h-auto object-contain"
               />
             </div>
@@ -72,7 +69,7 @@ export default function Hero() {
             {/* Download button aligned with other buttons */}
             <Button 
               onClick={handleDownloadPamphlet}
-              className="bg-physimed hover:bg-physimed-700 text-white font-medium px-8 py-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              className="bg-physimed hover:bg-physimed-700 text-white font-medium px-8 py-6 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <FileDown className="h-5 w-5" />
               {t("download_brochure")}
