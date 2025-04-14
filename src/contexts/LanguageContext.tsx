@@ -178,7 +178,7 @@ const translations: Translations = {
   },
   gift_premium: {
     en: 'Give Your Team the Gift of Premium Healthcare',
-    fr: 'Le Cadeau des Soins de Santé Premium',
+    fr: 'Offrez à votre équipe des soins de santé premium',
   },
   invest_team: {
     en: 'Investing in your team\'s health is investing in your company\'s future. Our tailored corporate plans provide comprehensive care that keeps your workforce healthy and productive.',
