@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'fr';
@@ -876,7 +875,127 @@ const translations: Translations = {
   terms_of_service: {
     en: 'Terms of Service',
     fr: 'Conditions d\'utilisation'
-  }
+  },
+  schedule_appointment: {
+    en: 'Schedule an Appointment',
+    fr: 'Planifier un rendez-vous',
+  },
+  book_consultation: {
+    en: 'Book Your Consultation',
+    fr: 'Réserver votre consultation',
+  },
+  schedule_description: {
+    en: 'Schedule your health check-up or corporate consultation using our easy online booking system.',
+    fr: 'Planifiez votre bilan de santé ou consultation d\'entreprise en utilisant notre système de réservation en ligne facile.',
+  },
+  personal_information: {
+    en: 'Personal Information',
+    fr: 'Informations personnelles',
+  },
+  first_name: {
+    en: 'First Name',
+    fr: 'Prénom',
+  },
+  last_name: {
+    en: 'Last Name',
+    fr: 'Nom de famille',
+  },
+  email_address: {
+    en: 'Email Address',
+    fr: 'Adresse courriel',
+  },
+  phone_number: {
+    en: 'Phone Number',
+    fr: 'Numéro de téléphone',
+  },
+  appointment_type: {
+    en: 'Type of Appointment',
+    fr: 'Type de rendez-vous',
+  },
+  annual_health_checkup: {
+    en: 'Annual Health Check-Up',
+    fr: 'Bilan de santé annuel',
+  },
+  followup_appointment: {
+    en: 'Follow-Up Appointment',
+    fr: 'Rendez-vous de suivi',
+  },
+  corporate_consultation: {
+    en: 'Corporate Consultation',
+    fr: 'Consultation d\'entreprise',
+  },
+  second_opinion: {
+    en: 'Second Opinion',
+    fr: 'Deuxième avis',
+  },
+  additional_notes: {
+    en: 'Additional Notes',
+    fr: 'Notes supplémentaires',
+  },
+  notes_placeholder: {
+    en: 'Any specific concerns or requirements for your appointment?',
+    fr: 'Des préoccupations ou des exigences spécifiques pour votre rendez-vous?',
+  },
+  appointment_details: {
+    en: 'Appointment Details',
+    fr: 'Détails du rendez-vous',
+  },
+  select_date: {
+    en: 'Select Date',
+    fr: 'Sélectionner une date',
+  },
+  pick_date: {
+    en: 'Pick a date',
+    fr: 'Choisir une date',
+  },
+  select_time: {
+    en: 'Select Time',
+    fr: 'Sélectionner une heure',
+  },
+  appointment_summary: {
+    en: 'Appointment Summary',
+    fr: 'Résumé du rendez-vous',
+  },
+  date: {
+    en: 'Date:',
+    fr: 'Date:',
+  },
+  time: {
+    en: 'Time:',
+    fr: 'Heure:',
+  },
+  type: {
+    en: 'Type:',
+    fr: 'Type:',
+  },
+  confirm_booking: {
+    en: 'Confirm Booking',
+    fr: 'Confirmer la réservation',
+  },
+  booking_terms: {
+    en: 'By booking an appointment, you agree to our',
+    fr: 'En réservant un rendez-vous, vous acceptez nos',
+  },
+  terms_conditions: {
+    en: 'terms and conditions',
+    fr: 'termes et conditions',
+  },
+  and: {
+    en: 'and',
+    fr: 'et',
+  },
+  privacy_policy: {
+    en: 'privacy policy',
+    fr: 'politique de confidentialité',
+  },
+  book_now: {
+    en: 'Book Now',
+    fr: 'Réserver maintenant',
+  },
+  back_to_home: {
+    en: 'Back to Home',
+    fr: 'Retour à l\'accueil',
+  },
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

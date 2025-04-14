@@ -13,6 +13,7 @@ import { format } from "date-fns";
 import { CalendarIcon, Check, ChevronsUpDown } from "lucide-react";
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const timeSlots = [
   '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
@@ -21,13 +22,14 @@ const timeSlots = [
 ];
 
 const appointmentTypes = [
-  { id: 'health-checkup', name: 'Annual Health Check-Up' },
-  { id: 'follow-up', name: 'Follow-Up Appointment' },
-  { id: 'consultation', name: 'Corporate Consultation' },
-  { id: 'second-opinion', name: 'Second Opinion' }
+  { id: 'health-checkup', nameKey: 'annual_health_checkup' },
+  { id: 'follow-up', nameKey: 'followup_appointment' },
+  { id: 'consultation', nameKey: 'corporate_consultation' },
+  { id: 'second-opinion', nameKey: 'second_opinion' }
 ];
 
 export default function BookingSection() {
+  const { t, language } = useLanguage();
   const [date, setDate] = useState<Date | undefined>(undefined);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -54,12 +56,12 @@ export default function BookingSection() {
     e.preventDefault();
     
     if (!date) {
-      toast.error('Please select a date for your appointment');
+      toast.error(language === 'en' ? 'Please select a date for your appointment' : 'Veuillez sélectionner une date pour votre rendez-vous');
       return;
     }
     
     if (!selectedTimeSlot) {
-      toast.error('Please select a time slot for your appointment');
+      toast.error(language === 'en' ? 'Please select a time slot for your appointment' : 'Veuillez sélectionner une plage horaire pour votre rendez-vous');
       return;
     }
     
@@ -72,9 +74,14 @@ export default function BookingSection() {
     console.log('Booking submitted:', bookingData);
     
     // Show success message
-    toast.success('Appointment booked successfully!', {
-      description: `Your appointment is scheduled for ${format(date, 'MMMM d, yyyy')} at ${selectedTimeSlot}.`,
-    });
+    toast.success(
+      language === 'en' ? 'Appointment booked successfully!' : 'Rendez-vous réservé avec succès!', 
+      {
+        description: language === 'en' 
+          ? `Your appointment is scheduled for ${format(date, 'MMMM d, yyyy')} at ${selectedTimeSlot}.`
+          : `Votre rendez-vous est prévu pour le ${format(date, 'MMMM d, yyyy')} à ${selectedTimeSlot}.`,
+      }
+    );
     
     // Reset form
     setFormData({
@@ -94,12 +101,12 @@ export default function BookingSection() {
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-physimed font-medium">Schedule an Appointment</span>
+          <span className="text-physimed font-medium">{t('schedule_appointment')}</span>
           <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
-            Book Your Consultation
+            {t('book_consultation')}
           </h2>
           <p className="text-gray-600">
-            Schedule your health check-up or corporate consultation using our easy online booking system.
+            {t('schedule_description')}
           </p>
         </div>
         
@@ -107,11 +114,11 @@ export default function BookingSection() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <h3 className="text-xl font-serif font-semibold mb-4">Personal Information</h3>
+                <h3 className="text-xl font-serif font-semibold mb-4">{t('personal_information')}</h3>
                 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="firstName">First Name</Label>
+                    <Label htmlFor="firstName">{t('first_name')}</Label>
                     <input
                       type="text"
                       id="firstName"
@@ -123,7 +130,7 @@ export default function BookingSection() {
                     />
                   </div>
                   <div>
-                    <Label htmlFor="lastName">Last Name</Label>
+                    <Label htmlFor="lastName">{t('last_name')}</Label>
                     <input
                       type="text"
                       id="lastName"
@@ -137,7 +144,7 @@ export default function BookingSection() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="email">Email Address</Label>
+                  <Label htmlFor="email">{t('email_address')}</Label>
                   <input
                     type="email"
                     id="email"
@@ -150,7 +157,7 @@ export default function BookingSection() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="phone">Phone Number</Label>
+                  <Label htmlFor="phone">{t('phone_number')}</Label>
                   <input
                     type="tel"
                     id="phone"
@@ -163,7 +170,7 @@ export default function BookingSection() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="appointmentType">Type of Appointment</Label>
+                  <Label htmlFor="appointmentType">{t('appointment_type')}</Label>
                   <RadioGroup 
                     onValueChange={(value) => setFormData(prev => ({ ...prev, appointmentType: value }))}
                     className="mt-2 space-y-2"
@@ -176,7 +183,7 @@ export default function BookingSection() {
                           className="text-physimed"
                         />
                         <Label htmlFor={type.id} className="font-normal cursor-pointer">
-                          {type.name}
+                          {t(type.nameKey)}
                         </Label>
                       </div>
                     ))}
@@ -184,7 +191,7 @@ export default function BookingSection() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="notes">Additional Notes</Label>
+                  <Label htmlFor="notes">{t('additional_notes')}</Label>
                   <textarea
                     id="notes"
                     name="notes"
@@ -192,16 +199,16 @@ export default function BookingSection() {
                     onChange={handleInputChange}
                     className="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-physimed focus:border-transparent"
                     rows={3}
-                    placeholder="Any specific concerns or requirements for your appointment?"
+                    placeholder={t('notes_placeholder')}
                   ></textarea>
                 </div>
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-xl font-serif font-semibold mb-4">Appointment Details</h3>
+                <h3 className="text-xl font-serif font-semibold mb-4">{t('appointment_details')}</h3>
                 
                 <div className="mb-6">
-                  <Label className="mb-2 block">Select Date</Label>
+                  <Label className="mb-2 block">{t('select_date')}</Label>
                   <Popover>
                     <PopoverTrigger asChild>
                       <Button
@@ -212,7 +219,7 @@ export default function BookingSection() {
                         )}
                       >
                         <CalendarIcon className="mr-2 h-4 w-4" />
-                        {date ? format(date, "PPP") : <span>Pick a date</span>}
+                        {date ? format(date, "PPP") : <span>{t('pick_date')}</span>}
                       </Button>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
@@ -233,7 +240,7 @@ export default function BookingSection() {
                 </div>
                 
                 <div>
-                  <Label className="mb-2 block">Select Time</Label>
+                  <Label className="mb-2 block">{t('select_time')}</Label>
                   <div className="grid grid-cols-3 gap-2 mt-3">
                     {timeSlots.map((time) => (
                       <Button
@@ -254,25 +261,25 @@ export default function BookingSection() {
                 
                 <div className="mt-8 pt-4">
                   <div className="bg-physimed-50 rounded-lg p-4 mb-6">
-                    <h4 className="font-medium text-physimed-800 mb-2">Appointment Summary</h4>
+                    <h4 className="font-medium text-physimed-800 mb-2">{t('appointment_summary')}</h4>
                     <div className="space-y-2 text-sm">
                       {date && (
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Date:</span>
+                          <span className="text-gray-600">{t('date')}</span>
                           <span className="font-medium">{format(date, "MMMM d, yyyy")}</span>
                         </div>
                       )}
                       {selectedTimeSlot && (
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Time:</span>
+                          <span className="text-gray-600">{t('time')}</span>
                           <span className="font-medium">{selectedTimeSlot}</span>
                         </div>
                       )}
                       {formData.appointmentType && (
                         <div className="flex justify-between">
-                          <span className="text-gray-600">Type:</span>
+                          <span className="text-gray-600">{t('type')}</span>
                           <span className="font-medium">
-                            {appointmentTypes.find(t => t.id === formData.appointmentType)?.name}
+                            {t(appointmentTypes.find(t => t.id === formData.appointmentType)?.nameKey || '')}
                           </span>
                         </div>
                       )}
@@ -283,17 +290,17 @@ export default function BookingSection() {
                     type="submit" 
                     className="w-full bg-physimed hover:bg-physimed-700 text-white"
                   >
-                    Confirm Booking
+                    {t('confirm_booking')}
                   </Button>
                   
                   <p className="text-xs text-gray-500 mt-4 text-center">
-                    By booking an appointment, you agree to our{" "}
+                    {t('booking_terms')}{" "}
                     <a href="/terms" className="text-physimed hover:underline">
-                      terms and conditions
+                      {t('terms_conditions')}
                     </a>{" "}
-                    and{" "}
+                    {t('and')}{" "}
                     <a href="/privacy" className="text-physimed hover:underline">
-                      privacy policy
+                      {t('privacy_policy')}
                     </a>
                     .
                   </p>
