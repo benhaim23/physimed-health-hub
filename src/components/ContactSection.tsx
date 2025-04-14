@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Upload } from 'lucide-react';
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from 'sonner';
+import { Input } from "@/components/ui/input";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -12,16 +14,24 @@ export default function ContactSection() {
     subject: '',
     message: ''
   });
+  const [files, setFiles] = useState<FileList | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      setFiles(e.target.files);
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
+    console.log('Files:', files);
     
     // Show success message
     toast.success('Your message has been sent!', {
@@ -36,6 +46,11 @@ export default function ContactSection() {
       subject: '',
       message: ''
     });
+    setFiles(null);
+    
+    // Reset file input by clearing the value
+    const fileInput = document.getElementById('file-upload') as HTMLInputElement;
+    if (fileInput) fileInput.value = '';
   };
 
   return (
@@ -141,6 +156,44 @@ export default function ContactSection() {
                   placeholder="How can we help you?"
                   required
                 />
+              </div>
+              
+              <div>
+                <label htmlFor="file-upload" className="block mb-2 text-sm font-medium text-gray-700">
+                  Attachments (optional)
+                </label>
+                <div className="flex items-center space-x-2">
+                  <Input
+                    id="file-upload"
+                    type="file"
+                    multiple
+                    onChange={handleFileChange}
+                    className="hidden"
+                  />
+                  <div className="relative w-full">
+                    <label 
+                      htmlFor="file-upload" 
+                      className="flex items-center justify-center w-full px-4 py-2 text-sm border border-gray-300 border-dashed rounded-md cursor-pointer bg-gray-50 hover:bg-gray-100 transition-colors"
+                    >
+                      <Upload size={18} className="mr-2 text-gray-500" />
+                      <span className="text-gray-500">
+                        {files && files.length > 0 
+                          ? `${files.length} file${files.length > 1 ? 's' : ''} selected` 
+                          : 'Click to upload files'}
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                {files && files.length > 0 && (
+                  <div className="mt-2 space-y-1">
+                    {Array.from(files).map((file, index) => (
+                      <div key={index} className="text-sm text-gray-600 flex items-center">
+                        <span className="truncate max-w-xs">{file.name}</span>
+                        <span className="ml-2 text-xs text-gray-500">({(file.size / 1024).toFixed(1)} KB)</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               
               <div className="flex items-center">
