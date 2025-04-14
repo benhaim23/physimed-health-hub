@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'fr';
@@ -776,3 +777,132 @@ const translations: Translations = {
     en: 'privacy policy',
     fr: 'politique de confidentialité'
   },
+  contact_information: {
+    en: 'Contact Information',
+    fr: 'Coordonnées'
+  },
+  phone_label: {
+    en: 'Phone',
+    fr: 'Téléphone'
+  },
+  toll_free: {
+    en: '1-800-363-6737 (Toll-Free)',
+    fr: '1-800-363-6737 (Sans frais)'
+  },
+  email_label: {
+    en: 'Email',
+    fr: 'Courriel'
+  },
+  address_label: {
+    en: 'Address',
+    fr: 'Adresse'
+  },
+  hours_operation: {
+    en: 'Hours of Operation',
+    fr: 'Heures d\'ouverture'
+  },
+  monday_friday: {
+    en: 'Monday - Friday:',
+    fr: 'Lundi - Vendredi:'
+  },
+  saturday: {
+    en: 'Saturday:',
+    fr: 'Samedi:'
+  },
+  sunday: {
+    en: 'Sunday:',
+    fr: 'Dimanche:'
+  },
+  corporate_inquiries: {
+    en: 'Corporate Inquiries',
+    fr: 'Demandes corporatives'
+  },
+  corp_inquiries_text: {
+    en: 'For corporate plan inquiries, please contact our corporate services team:',
+    fr: 'Pour les demandes concernant les forfaits corporatifs, veuillez contacter notre équipe de services corporatifs:'
+  },
+  premium_healthcare: {
+    en: 'Premium healthcare services for professionals.',
+    fr: 'Services de santé premium pour professionnels.'
+  },
+  quick_links: {
+    en: 'Quick Links',
+    fr: 'Liens rapides'
+  },
+  home_link: {
+    en: 'Home',
+    fr: 'Accueil'
+  },
+  our_services: {
+    en: 'Our Services',
+    fr: 'Nos services'
+  },
+  pricing_plans: {
+    en: 'Pricing Plans',
+    fr: 'Forfaits tarifaires'
+  },
+  book_appointment: {
+    en: 'Book Appointment',
+    fr: 'Prendre rendez-vous'
+  },
+  about_us: {
+    en: 'About Us',
+    fr: 'À propos de nous'
+  },
+  newsletter: {
+    en: 'Newsletter',
+    fr: 'Infolettre'
+  },
+  newsletter_text: {
+    en: 'Stay updated with our latest health services.',
+    fr: 'Restez informé de nos derniers services de santé.'
+  },
+  email_placeholder_newsletter: {
+    en: 'Your email address',
+    fr: 'Votre adresse courriel'
+  },
+  subscribe: {
+    en: 'Subscribe',
+    fr: 'S\'abonner'
+  },
+  all_rights_reserved: {
+    en: 'All rights reserved.',
+    fr: 'Tous droits réservés.'
+  },
+  privacy_policy_link: {
+    en: 'Privacy Policy',
+    fr: 'Politique de confidentialité'
+  },
+  terms_of_service: {
+    en: 'Terms of Service',
+    fr: 'Conditions d\'utilisation'
+  }
+};
+
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('en');
+
+  const t = (key: string): string => {
+    if (!translations[key]) {
+      console.warn(`Translation key "${key}" not found.`);
+      return key;
+    }
+    return translations[key][language];
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = (): LanguageContextType => {
+  const context = useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
