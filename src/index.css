@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -106,17 +107,35 @@
     @apply py-12 md:py-24;
   }
   
+  /* Standardized section headers */
+  .section-header {
+    @apply mb-12 md:mb-16;
+  }
+  
   .section-header-badge {
-    @apply inline-block px-4 py-1.5 bg-physimed-100 text-physimed-800 rounded-full text-sm font-medium shadow-sm;
+    @apply inline-block px-4 py-1.5 bg-physimed-100 rounded-full text-physimed-800 text-sm font-medium shadow-sm mb-3;
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-serif font-bold mt-2 mb-5 relative;
+    @apply text-3xl md:text-4xl lg:text-5xl font-serif font-bold mt-2 mb-5 relative;
+  }
+  
+  .section-description {
+    @apply text-gray-600 text-lg mt-6 leading-relaxed max-w-2xl mx-auto;
+  }
+  
+  /* Title style variations that can be combined with .section-title */
+  .section-title-underline {
+    @apply inline-block;
   }
   
   .section-title-underline::after {
     content: '';
     @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-physimed rounded-full;
+  }
+  
+  .section-title-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-physimed to-physimed-700;
   }
   
   .section-title-background {
@@ -126,6 +145,34 @@
   .section-title-background::before {
     content: '';
     @apply absolute bottom-2 left-0 w-full h-3 bg-physimed-100 opacity-50 -z-10;
+  }
+  
+  /* Alternative header styles */
+  .section-header-line {
+    @apply flex items-center justify-center mb-6;
+  }
+  
+  .section-header-line::before,
+  .section-header-line::after {
+    content: '';
+    @apply h-[2px] w-16 bg-physimed opacity-70;
+  }
+  
+  .section-header-line-badge {
+    @apply mx-4 px-5 py-1.5 bg-physimed text-white rounded-full text-sm font-medium uppercase tracking-wider shadow-sm;
+  }
+  
+  .section-header-bordered {
+    @apply relative mb-8;
+  }
+  
+  .section-header-bordered::before {
+    content: '';
+    @apply absolute top-1/2 left-0 w-full h-[1px] bg-gray-200;
+  }
+  
+  .section-header-bordered-badge {
+    @apply relative inline-block px-6 py-1 bg-white text-physimed font-medium text-lg z-10;
   }
 }
 
