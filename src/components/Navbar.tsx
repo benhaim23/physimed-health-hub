@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105">
               <img 
-                src="/lovable-uploads/9517cafd-887f-421a-85e8-41ba5866a617.png" 
+                src="/lovable-uploads/1005bc46-8cdd-4ae3-82bf-7ebc877fa9d6.png" 
                 alt="Physimed Logo" 
                 className="h-16" 
               />

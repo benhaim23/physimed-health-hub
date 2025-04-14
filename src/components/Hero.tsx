@@ -55,8 +55,8 @@ export default function Hero() {
           <div className="relative lg:h-[520px] flex items-center justify-center">
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
             <img 
-              src="/lovable-uploads/f62a3cfd-49ea-4c22-a8af-64453099b378.png" 
-              alt="Physimed Health Checkup" 
+              src="/lovable-uploads/3c658043-92b2-4e75-9b03-570c23c97b29.png" 
+              alt="Physimed Doctors" 
               className="rounded-2xl shadow-2xl max-w-full max-h-[520px] object-cover float-animation"
             />
             <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-physimed-50 blur-xl opacity-60 float-animation"></div>
