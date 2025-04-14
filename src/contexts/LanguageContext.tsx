@@ -425,8 +425,8 @@ const translations: Translations = {
     fr: 'Idéal pour les individus recherchant une évaluation annuelle approfondie.',
   },
   whats_included: {
-    en: 'What\'s Included:',
-    fr: 'Ce qui est inclus:'
+    en: "What's Included:",
+    fr: "Ce qui est inclus:"
   },
   pre_checkup: {
     en: 'Pre-Check-Up:',
