@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Check, Calendar, AlertCircle, ArrowRight, MoveRight, PhoneCall } from 'lucide-react';
+import { Check, Calendar, AlertCircle, ArrowRight, MoveRight, PhoneCall, Clock, VideoIcon, Pill, ClipboardCheck, Network, Award, Users, Zap } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Link } from 'react-router-dom';
@@ -14,6 +14,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { StarBorder } from "@/components/ui/star-border";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 export default function PricingSection() {
@@ -257,63 +258,150 @@ export default function PricingSection() {
           </div>
         </div>
         
-        {/* Medical Concierge Service */}
+        {/* Medical Concierge Service - Enhanced Section */}
         <div className="mt-16">
-          <Card className="bg-white border-physimed-100">
-            <CardContent className="p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-physimed-800 mb-4">
-                    Medical Concierge Service
-                  </h3>
-                  <p className="text-gray-600 mb-6">
-                    Available with all care packages, our medical concierge service ensures rapid, expert support from 6 AM to 9 PM, every day—even on holidays.
-                  </p>
+          <Card className="bg-white border-physimed-100 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Left Side: Service Description and Features */}
+                <div className="p-8 md:p-12 bg-gradient-to-br from-white to-physimed-50">
+                  <div className="flex items-center mb-6">
+                    <div className="w-10 h-10 rounded-full bg-physimed flex items-center justify-center mr-4">
+                      <PhoneCall size={20} className="text-white" />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-physimed-800">
+                      Medical Concierge Service
+                    </h3>
+                  </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
-                      "Health-related phone consultations",
-                      "Emergency appointments",
-                      "Telemedicine (video visits)",
-                      "Prescription renewals",
-                      "Form completion assistance",
-                      "Coordination of referrals"
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex items-start">
-                        <Check size={18} className="text-physimed mr-2 mt-1 flex-shrink-0" />
-                        <span className="text-gray-700">{item}</span>
-                      </div>
-                    ))}
+                  <div className="mb-8">
+                    <p className="text-gray-700 mb-6 text-lg leading-relaxed">
+                      Available with all care packages, our medical concierge service ensures rapid, expert support 
+                      <span className="bg-physimed-100 text-physimed-800 px-2 py-0.5 mx-1 rounded-md font-medium">
+                        from 6 AM to 9 PM
+                      </span> 
+                      every day—even on holidays.
+                    </p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                    <TooltipProvider>
+                      {[
+                        {
+                          icon: <PhoneCall size={20} className="text-physimed" />,
+                          text: "Health-related phone consultations",
+                          tooltip: "Get quick medical advice without leaving home"
+                        },
+                        {
+                          icon: <Calendar size={20} className="text-physimed" />,
+                          text: "Emergency appointments",
+                          tooltip: "Same-day appointments for urgent medical needs"
+                        },
+                        {
+                          icon: <VideoIcon size={20} className="text-physimed" />,
+                          text: "Telemedicine (video visits)",
+                          tooltip: "Connect with your doctor virtually from anywhere"
+                        },
+                        {
+                          icon: <Pill size={20} className="text-physimed" />,
+                          text: "Prescription renewals",
+                          tooltip: "Quick prescription management without unnecessary appointments"
+                        },
+                        {
+                          icon: <ClipboardCheck size={20} className="text-physimed" />,
+                          text: "Form completion assistance",
+                          tooltip: "Streamlined processing of medical documentation"
+                        },
+                        {
+                          icon: <Network size={20} className="text-physimed" />,
+                          text: "Coordination of referrals",
+                          tooltip: "Seamless connection to specialists when needed"
+                        }
+                      ].map((item, idx) => (
+                        <Tooltip key={idx}>
+                          <TooltipTrigger asChild>
+                            <div className="flex items-center p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 cursor-help">
+                              <div className="w-9 h-9 rounded-full bg-physimed-50 flex items-center justify-center mr-3">
+                                {item.icon}
+                              </div>
+                              <span className="text-gray-800">{item.text}</span>
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent className="bg-physimed-800 text-white border-none">
+                            <p>{item.tooltip}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      ))}
+                    </TooltipProvider>
                   </div>
                   
                   <div className="mt-8">
-                    <StarBorder as={Link} to="/services#concierge" className="text-physimed hover:text-physimed-700">
-                      Learn More About Concierge Service
-                    </StarBorder>
+                    <Button asChild variant="outline" className="group text-physimed hover:text-physimed-700 border-physimed hover:border-physimed-700 hover:bg-physimed-50">
+                      <Link to="/services#concierge" className="flex items-center">
+                        Learn More About Concierge Service
+                        <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
                 
-                <div className="bg-physimed-50 p-6 rounded-lg">
-                  <h4 className="font-semibold text-lg mb-4 text-physimed-800">Did you know?</h4>
-                  <p className="text-gray-600 mb-4">
-                    Our concierge service helps corporate clients save an average of 20+ hours per year in healthcare administration and waiting time.
-                  </p>
+                {/* Right Side: Statistics and Visual Appeal */}
+                <div className="bg-physimed-800 text-white p-8 md:p-12 relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-10 bg-[url('/src/assets/pattern-bg.svg')] pointer-events-none"></div>
                   
-                  <div className="space-y-4">
-                    {[
-                      { value: "93%", text: "of our corporate clients report increased employee satisfaction with healthcare benefits" },
-                      { value: "3.5x", text: "faster access to medical care compared to traditional healthcare routes" },
-                      { value: "24/7", text: "peace of mind for employees and their families with responsive healthcare access" }
-                    ].map((stat, idx) => (
-                      <div key={idx} className="flex items-center bg-white p-3 rounded-md shadow-sm">
-                        <div className="w-12 h-12 bg-physimed-100 rounded-full flex items-center justify-center mr-4 text-physimed-800 font-bold">
-                          {stat.value}
+                  <div className="relative z-10">
+                    <div className="flex items-center mb-8">
+                      <Award size={22} className="text-physimed-100 mr-3" />
+                      <h4 className="text-xl font-semibold text-white">Did you know?</h4>
+                    </div>
+                    
+                    <p className="text-physimed-100 mb-8 text-lg">
+                      Our concierge service helps corporate clients save an average of 
+                      <span className="text-white font-bold mx-1">20+ hours per year</span> 
+                      in healthcare administration and waiting time.
+                    </p>
+                    
+                    <div className="space-y-6">
+                      {[
+                        { 
+                          icon: <Users size={20} className="text-physimed-800" />,
+                          value: "93%", 
+                          text: "of our corporate clients report increased employee satisfaction with healthcare benefits",
+                          highlight: "Employee Satisfaction"
+                        },
+                        { 
+                          icon: <Zap size={20} className="text-physimed-800" />,
+                          value: "3.5x", 
+                          text: "faster access to medical care compared to traditional healthcare routes",
+                          highlight: "Rapid Access" 
+                        },
+                        { 
+                          icon: <Clock size={20} className="text-physimed-800" />,
+                          value: "24/7", 
+                          text: "peace of mind for employees and their families with responsive healthcare access",
+                          highlight: "Peace of Mind"
+                        }
+                      ].map((stat, idx) => (
+                        <div key={idx} className="bg-physimed-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                          <div className="flex items-center mb-3">
+                            <div className="w-10 h-10 bg-physimed-100 rounded-full flex items-center justify-center mr-4">
+                              {stat.icon}
+                            </div>
+                            <div>
+                              <span className="text-sm text-physimed-100 font-medium uppercase tracking-wide">
+                                {stat.highlight}
+                              </span>
+                              <div className="text-2xl font-bold text-white">
+                                {stat.value}
+                              </div>
+                            </div>
+                          </div>
+                          <p className="text-physimed-100">
+                            {stat.text}
+                          </p>
                         </div>
-                        <p className="text-sm text-gray-600">
-                          {stat.text}
-                        </p>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
