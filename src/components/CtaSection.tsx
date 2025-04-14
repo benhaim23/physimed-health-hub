@@ -88,7 +88,7 @@ export default function CtaSection() {
                   </div>
                   
                   <div className="relative">
-                    <label htmlFor="employees" className="block mb-2 text-sm font-medium">{t("number_employees")}</label>
+                    <label htmlFor="employees" className="block mb-2 text-sm font-medium">{t("number_of_employees")}</label>
                     <select 
                       id="employees" 
                       className="w-full px-4 py-2 rounded-md bg-white/10 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 text-white appearance-none transition-all duration-300"

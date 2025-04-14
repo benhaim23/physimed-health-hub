@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'fr';
@@ -72,7 +73,6 @@ const translations: Translations = {
     en: 'Book Consultation',
     fr: 'Prendre rendez-vous',
   },
-  // Add translations for the download button and alert
   download_brochure: {
     en: 'Download Corporate Brochure',
     fr: 'Télécharger la brochure corporative',
@@ -176,6 +176,83 @@ const translations: Translations = {
   personalized_service: {
     en: 'Personalized Service',
     fr: 'Service personnalisé',
+  },
+  // Fix for CTA section
+  gift_premium: {
+    en: 'Give Your Team the Gift of Premium Healthcare',
+    fr: 'Offrez à votre équipe des soins de santé premium',
+  },
+  invest_team: {
+    en: 'Investing in your team\'s health is investing in your company\'s future. Our tailored corporate plans provide comprehensive care that keeps your workforce healthy and productive.',
+    fr: 'Investir dans la santé de votre équipe, c\'est investir dans l\'avenir de votre entreprise. Nos forfaits corporatifs sur mesure offrent des soins complets qui maintiennent votre personnel en bonne santé et productif.',
+  },
+  attract_talent: {
+    en: 'Attract and retain top talent with premium health benefits',
+    fr: 'Attirez et conservez les meilleurs talents avec des avantages santé premium',
+  },
+  reduce_absenteeism: {
+    en: 'Reduce absenteeism with proactive healthcare',
+    fr: 'Réduisez l\'absentéisme grâce à des soins de santé proactifs',
+  },
+  save_time: {
+    en: 'Save time with on-site and virtual healthcare options',
+    fr: 'Gagnez du temps avec des options de soins sur site et virtuels',
+  },
+  request_consultation: {
+    en: 'Request a Consultation',
+    fr: 'Demander une consultation',
+  },
+  view_plan_details: {
+    en: 'View Plan Details',
+    fr: 'Voir les détails du forfait',
+  },
+  book_corporate_demo: {
+    en: 'Book a Corporate Demo',
+    fr: 'Réserver une démonstration corporative',
+  },
+  your_company: {
+    en: 'Your Company',
+    fr: 'Votre entreprise',
+  },
+  your_name: {
+    en: 'Your Name',
+    fr: 'Votre nom',
+  },
+  email_address: {
+    en: 'Email Address',
+    fr: 'Adresse courriel',
+  },
+  email_placeholder: {
+    en: 'you@company.com',
+    fr: 'vous@entreprise.com',
+  },
+  select_option: {
+    en: 'Select an option',
+    fr: 'Sélectionnez une option',
+  },
+  employees_1_10: {
+    en: '1-10 employees',
+    fr: '1-10 employés',
+  },
+  employees_11_50: {
+    en: '11-50 employees',
+    fr: '11-50 employés',
+  },
+  employees_51_200: {
+    en: '51-200 employees',
+    fr: '51-200 employés',
+  },
+  employees_201: {
+    en: '201+ employees',
+    fr: '201+ employés',
+  },
+  schedule_demo: {
+    en: 'Schedule Demo',
+    fr: 'Planifier la démonstration',
+  },
+  back_to_home: {
+    en: 'Back to Home',
+    fr: 'Retour à l\'accueil',
   },
 };
 
