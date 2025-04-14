@@ -30,16 +30,16 @@ export default function Hero() {
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
               {t("hero_subtitle")}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-              <div className="flex items-center group">
+            <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex items-center group bg-white/80 px-4 py-2 rounded-lg shadow-sm hover:shadow transition-all duration-300">
                 <Clock className="h-5 w-5 text-physimed mr-2 transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-gray-700 font-medium">{t("same_day_access")}</span>
               </div>
-              <div className="flex items-center group">
+              <div className="flex items-center group bg-white/80 px-4 py-2 rounded-lg shadow-sm hover:shadow transition-all duration-300">
                 <UserCheck className="h-5 w-5 text-physimed mr-2 transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-gray-700 font-medium">{t("consistent_care")}</span>
               </div>
-              <div className="flex items-center group">
+              <div className="flex items-center group bg-white/80 px-4 py-2 rounded-lg shadow-sm hover:shadow transition-all duration-300">
                 <Award className="h-5 w-5 text-physimed mr-2 transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-gray-700 font-medium">{t("premium_services")}</span>
               </div>
@@ -57,26 +57,32 @@ export default function Hero() {
             </div>
           </div>
           
-          <div className="relative lg:h-[580px] flex flex-col items-center justify-center">
+          <div className="relative lg:h-[600px] flex flex-col items-center justify-center">
             <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-physimed-100 rounded-full opacity-50 blur-3xl pulse-subtle"></div>
+            
             {/* Pamphlet image with styling */}
-            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-full max-h-[520px] pamphlet-container">
+            <div className="relative bg-white rounded-lg shadow-xl overflow-hidden max-w-[90%] pamphlet-container transform hover:scale-[1.02] transition-transform duration-300">
               <img 
-                src="/lovable-uploads/5213698c-df11-4326-9345-475e741dcda8.png" 
+                src="/lovable-uploads/cccb7e3f-92ec-4b8c-ad70-74247d7dddf8.png" 
                 alt="Physimed Health Checkup Pamphlet" 
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
               
               {/* Page curl effect */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gray-100 shadow-inner transform rotate-45 translate-x-10 -translate-y-10"></div>
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gray-100 shadow-inner transform rotate-45 translate-x-8 -translate-y-8"></div>
+              
+              {/* Bottom branding bar */}
+              <div className="absolute bottom-0 left-0 right-0 h-12 bg-physimed flex items-center justify-center">
+                <span className="text-white font-medium tracking-wider text-sm">WWW.PHYSIMED.COM</span>
+              </div>
             </div>
             
-            {/* Download button */}
+            {/* Download button with improved styling */}
             <Button 
               onClick={handleDownloadPamphlet}
-              className="mt-6 bg-physimed-700 hover:bg-physimed-800 text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              className="mt-6 bg-physimed hover:bg-physimed-800 text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 hover:translate-y-[-2px]"
             >
-              <FileDown size={20} />
+              <FileDown className="h-5 w-5" />
               {t("download_brochure")}
             </Button>
             
