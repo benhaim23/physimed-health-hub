@@ -90,20 +90,12 @@ export default function TestimonialsSection() {
     <section className="py-16 md:py-24 bg-gray-50 overflow-visible">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          {/* Enhanced section header */}
-          <div className="flex items-center justify-center mb-3">
-            <div className="h-[2px] w-16 bg-physimed opacity-70"></div>
-            <span className="mx-4 px-5 py-1.5 bg-physimed text-white rounded-full text-sm font-medium uppercase tracking-wider shadow-sm">
-              Testimonials
-            </span>
-            <div className="h-[2px] w-16 bg-physimed opacity-70"></div>
+          <div className="inline-block px-4 py-1 bg-physimed-50 rounded-full mb-3">
+            <span className="text-physimed font-medium">Testimonials</span>
           </div>
-          
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mt-2 mb-6 relative">
-            <span className="relative z-10">What Our Corporate Clients Say</span>
-            <div className="absolute bottom-0 left-0 w-full h-3 bg-physimed-100 opacity-50 -z-0 transform -skew-x-6"></div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mt-2 mb-6 text-gradient">
+            What Our Corporate Clients Say
           </h2>
-          
           <p className="text-gray-600 text-lg">
             Hear from business leaders who've partnered with Physimed for their corporate healthcare needs.
           </p>

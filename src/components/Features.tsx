@@ -50,15 +50,13 @@ export default function Features() {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="section-header">
-            <span className="section-header-badge">Your Health, Streamlined</span>
-            <h2 className="section-title section-title-underline">
-              Why Corporations Partner With Physimed
-            </h2>
-            <p className="section-description">
-              We deliver premium healthcare that meets the demands of today's corporate environments. Our comprehensive approach ensures your team stays healthy, proactive, and productive.
-            </p>
-          </div>
+          <span className="text-physimed font-medium">Your Health, Streamlined</span>
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mt-2 mb-4">
+            Why Corporations Partner With Physimed
+          </h2>
+          <p className="text-gray-600">
+            We deliver premium healthcare that meets the demands of today's corporate environments. Our comprehensive approach ensures your team stays healthy, proactive, and productive.
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
