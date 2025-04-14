@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, Calendar, Home, FileText, CreditCard, Users, MessageSquare } from 'lucide-react';
@@ -39,7 +38,7 @@ export default function Navbar() {
               <img 
                 src="/lovable-uploads/9517cafd-887f-421a-85e8-41ba5866a617.png" 
                 alt="Physimed Logo" 
-                className="h-16" 
+                className="h-20"
               />
             </Link>
           </div>
